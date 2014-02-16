@@ -1,0 +1,73 @@
+/* CSS Document */
+
+body{
+background-color: #000066;
+}
+#container {
+	width: 960px;
+	background-color: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+#content {
+	background-color: #B6DDE8;
+}
+#page-content {
+	padding: 2px 10px 10px 10px;
+}
+#header {
+	height: 40px;
+}
+#footer {
+	height: 40px;
+}
+#page-title {
+	border-left: solid 7px #4573d5;
+	margin-bottom: 10px;
+	padding-left: 5px;
+}
+h2 {
+	font-size: 24px;
+	line-height: 36px;
+}
+.textarea-large {
+	width: 250px;
+	height: 40px;
+}
+.textarea-xxlarge {
+	width: 450px;
+	height: 100px;
+}
+.delete {
+    background-image:url(thungrac.PNG);
+	width: 25px !important;
+	height:23px !important;
+}
+span {
+	font-weight:bold;
+}
+a {
+	color: #0088cc;
+	text-decoration: none !important;
+}
+.input_txt, textarea {
+	border: 1px solid #696969 !important;
+	padding: 2px 5px !important;
+	border-radius: 5px !important;
+	box-shadow: 2px 2px 2px #a9a9a9 inset !important;
+	width: 98% !important;
+	height: 25px !important;
+}
+.w_100 {
+	width: 100px !important;
+}
+.w_200 {
+	width: 200px !important;
+}
+.required {
+	color: #F00;
+	font-size: 18px;
+}
+
+#top_menu_nav{
+	font-size: 1.3em;
+}
