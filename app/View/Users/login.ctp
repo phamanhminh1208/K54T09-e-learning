@@ -58,7 +58,7 @@
 						'label'				=>	false,
 						'div'				=>	false,
 					)
-			));
+			));			
 		?>
 		<dl>
 			<dt><label for="Username">ユーザー名</label></dt>

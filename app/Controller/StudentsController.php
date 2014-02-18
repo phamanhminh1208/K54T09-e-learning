@@ -10,9 +10,13 @@
 class StudentsController extends AppController {
 
 	var $name= 'Students';
+	
 	function homepage() {
 		
 	}
-
+	
+	function locked(){
+		
+	}
 }
 ?>

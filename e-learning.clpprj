@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="C:\xampp\htdocs\e-learning\e-learning.clpprj">
-	<settings><PM_URL><![CDATA[http://localhost/e-learning]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost/e-learning]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";C:\xampp\htdocs\e-learning\app\Model\Codelobster0.php;"/><added value=""/><errors version="4.5">
+	<settings><PM_URL><![CDATA[http://localhost/e-learning]]></PM_URL><PM_HOME_URL><![CDATA[http://localhost/e-learning]]></PM_HOME_URL><PM_LIBS><![CDATA[]]></PM_LIBS><PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION><PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR><PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE></settings><removed value=";C:\xampp\htdocs\e-learning\app\Model\Codelobster0.php;C:\xampp\htdocs\e-learning\app\View\Managers\Codelobster0.ctp;C:\xampp\htdocs\e-learning\app\View\SystemParams\homepage.ctp;C:\xampp\htdocs\e-learning\app\View\Users\verifycode_confirm.ctp;"/><added value=""/><errors version="4.5">
 		<errfile name="C:\xampp\htdocs\e-learning\lib\Cake\Utility\String.php">
 			<error val="5;24;12;24;551;1;"/>
 		</errfile>
@@ -768,6 +768,16 @@
 			</treenode>
 			<treenode node="AllNetworkTest;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\AllNetworkTest.php;f0;25;1;40;;;;vpos;;vPHPUnit_Framework_TestSuite;;c;;r;;d57,25;;b0,0;;m">
 				<treenode node="suite;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\AllNetworkTest.php;f15;32;2;39;;;;vpos;;v;;r;;d32,32;;b1,5;;m">
+				</treenode>
+			</treenode>
+			<treenode node="AllowedIp;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Model\AllowedIP.php;f0;9;1;12;;;;vpos;;vAppModel;;c;;r;;d33,9;;b0,0;;m">
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\AllowedIP.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="AllowedIpsController;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Controller\AllowedIPsController.php;f0;9;1;16;;;;vpos;;vAppController;;c;;r;;d49,9;;b0,0;;m">
+				<treenode node="add;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\AllowedIPsController.php;f1;12;2;14;;;;vpos;;v;;r;;d16,12;;b0,0;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\AllowedIPsController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="AllRoutingTest;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\AllRoutingTest.php;f0;25;1;42;;;;vpos;;vPHPUnit_Framework_TestSuite;;c;;r;;d57,25;;b0,0;;m">
@@ -14416,6 +14426,26 @@
 				<treenode node="testSendData;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Network\Email\MailTransportTest.php;f8;44;2;88;;;;vpos;;v;;r;;d32,44;;b1,0;;m">
 				</treenode>
 			</treenode>
+			<treenode node="Manager;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Model\Manager.php;f0;9;1;12;;;;vpos;;vAppModel;;c;;r;;d31,9;;b0,0;;m">
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\Manager.php;f1;11;6;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="ManagersController;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f0;9;1;31;;;;vpos;;vAppController;;c;;r;;d47,9;;b0,0;;m">
+				<treenode node="backup;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f1;24;2;26;;;;vpos;;v;;r;;d19,24;;b0,0;;m">
+				</treenode>
+				<treenode node="cancelAccess;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f1;28;2;30;;;;vpos;;v;;r;;d24,28;;b0,0;;m">
+				</treenode>
+				<treenode node="homepage;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f1;20;2;22;;;;vpos;;v;;r;;d21,20;;b0,0;;m">
+				</treenode>
+				<treenode node="cacheAction;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f5;16;17;16;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="helpers;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f5;14;13;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="layout;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f5;13;12;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node="MediaView;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\View\MediaView.php;f0;57;1;99;;;;vpos;;vView;;c;;r;;d29,57;;b0,0;;m">
 				<treenode node="render;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\View\MediaView.php;f8;66;2;97;;;;vpos;;v;;r;;d54,66;;b1,0;;mview;;playout;;p">
 					<treenode node="layout;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\View\MediaView.php;f38;66;45;66;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
@@ -21140,10 +21170,12 @@
 				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\Student.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="StudentsController;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f0;9;1;16;;;;vpos;;vAppController;;c;;r;;d47,9;;b0,0;;m">
-				<treenode node="homepage;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f1;12;2;14;;;;vpos;;v;;r;;d21,12;;b0,0;;m">
+			<treenode node="StudentsController;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f0;9;1;20;;;;vpos;;vAppController;;c;;r;;d47,9;;b0,0;;m">
+				<treenode node="homepage;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f1;13;2;15;;;;vpos;;v;;r;;d21,13;;b0,0;;m">
 				</treenode>
-				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f1;11;6;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="verifycodeConfirm;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f1;17;2;19;;;;vpos;;v;;r;;d29,17;;b0,0;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="Syfile;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f0;1596;1;1611;;;;vpos;;vCakeTestModel;;c;;r;;d35,1596;;b0,0;;m">
@@ -21206,6 +21238,16 @@
 				<treenode node="typesProvider;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Log\Engine\SyslogLogTest.php;f8;79;2;90;;;;vpos;;v;;r;;d33,79;;b1,0;;m">
 				</treenode>
 			</treenode>
+			<treenode node="SystemParam;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Model\SystemParam.php;f0;9;1;12;;;;vpos;;vAppModel;;c;;r;;d35,9;;b0,0;;m">
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\SystemParam.php;f1;11;6;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="SystemParamsController;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Controller\SystemParamsController.php;f0;9;1;16;;;;vpos;;vAppController;;c;;r;;d51,9;;b0,0;;m">
+				<treenode node="changeValue;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\SystemParamsController.php;f1;13;2;15;;;;vpos;;v;;r;;d24,13;;b0,0;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\SystemParamsController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
 			<treenode node="Tag;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f0;457;1;465;;;;vpos;;vCakeTestModel;;c;;r;;d32,457;;b0,0;;m">
 				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f8;464;13;464;;;;vpos;;v;;r;;d-1,-1;;b1,0;;m">
 				</treenode>
@@ -21256,6 +21298,20 @@
 				<treenode node="testLoadWithEnableFalse;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Console\TaskCollectionTest.php;f8;75;2;81;;;;vpos;;v;;r;;d43,75;;b1,0;;m">
 				</treenode>
 				<treenode node="testUnload;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Console\TaskCollectionTest.php;f8;118;2;131;;;;vpos;;v;;r;;d30,118;;b1,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="Teacher;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Model\Teacher.php;f0;9;1;12;;;;vpos;;vAppModel;;c;;r;;d31,9;;b0,0;;m">
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\Teacher.php;f1;11;6;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+			</treenode>
+			<treenode node="TeachersController;PHP:Class Name;C:\xampp\htdocs\e-learning\app\Controller\TeachersController.php;f0;9;1;23;;;;vpos;;vAppController;;c;;r;;d47,9;;b0,0;;m">
+				<treenode node="homepage;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\TeachersController.php;f1;12;2;14;;;;vpos;;v;;r;;d21,12;;b0,0;;m">
+				</treenode>
+				<treenode node="listTeacher;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\TeachersController.php;f1;16;2;18;;;;vpos;;v;;r;;d24,16;;b0,0;;m">
+				</treenode>
+				<treenode node="verifycodeConfirm;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\TeachersController.php;f1;20;2;22;;;;vpos;;v;;r;;d29,20;;b0,0;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\TeachersController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="TemplateTask;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Console\Command\Task\TemplateTask.php;f0;26;1;216;;;;vpos;;vAppShell;;c;;r;;d36,26;;b0,0;;m">
@@ -24188,34 +24244,48 @@
 				<treenode node="_paths;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Console\Command\UpgradeShell.php;f11;40;18;40;;;;vpos;;v;;r;;d-1,-1;;b2,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="User;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f0;196;1;227;;C:\xampp\htdocs\e-learning\app\Model\User.php;f0;9;1;105;;;;vpos;;vAppModel;;c;;r;;d28,9;;b0,0;;m">
+			<treenode node="User;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f0;196;1;227;;C:\xampp\htdocs\e-learning\app\Model\User.php;f0;9;1;142;;;;vpos;;vAppModel;;c;;r;;d28,9;;b0,0;;m">
 				<treenode node="beforeFind;PHP:Function Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f8;218;2;225;;;;vpos;;v;;r;;d40,218;;b1,0;;mqueryData;;p">
 					<treenode node="queryData;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f28;218;38;218;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="checkUsername;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;63;2;80;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;63;2;80;;;;vpos;;v;;r;;d32,63;;b1,0;;m">
-					<treenode node="condition;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f3;65;13;65;;C:\xampp\htdocs\e-learning\app\Model\User.php;f3;65;13;65;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="checkUsername;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;100;2;117;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;100;2;117;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;100;2;117;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;100;2;117;;;;vpos;;v;;r;;d32,100;;b1,0;;m">
+					<treenode node="condition;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f3;102;13;102;;C:\xampp\htdocs\e-learning\app\Model\User.php;f3;102;13;102;;C:\xampp\htdocs\e-learning\app\Model\User.php;f3;102;13;102;;C:\xampp\htdocs\e-learning\app\Model\User.php;f3;102;13;102;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;64;16;64;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;64;16;64;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-				</treenode>
-				<treenode node="comparePassword;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;88;2;94;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;88;2;94;;;;vpos;;v;;r;;d34,88;;b1,0;;m">
-					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;89;10;89;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;89;10;89;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;101;16;101;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;101;16;101;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;101;16;101;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;101;16;101;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="hashPassword;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f1;96;2;104;;C:\xampp\htdocs\e-learning\app\Model\User.php;f1;96;2;104;;;;vpos;;v;;r;;d29,96;;b0,0;;mdata;;p">
-					<treenode node="data;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f23;96;28;96;;C:\xampp\htdocs\e-learning\app\Model\User.php;f23;96;28;96;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
-					</treenode>
-					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;98;16;98;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;98;16;98;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="comparePassword;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;125;2;131;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;125;2;131;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;125;2;131;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;125;2;131;;;;vpos;;v;;r;;d34,125;;b1,0;;m">
+					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;126;10;126;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;126;10;126;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;126;10;126;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;126;10;126;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="validateUser;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;49;2;55;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;49;2;55;;;;vpos;;v;;r;;d31,49;;b1,0;;m">
-					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;50;10;50;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;50;10;50;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="hashPassword;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f1;133;2;141;;C:\xampp\htdocs\e-learning\app\Model\User.php;f1;133;2;141;;C:\xampp\htdocs\e-learning\app\Model\User.php;f1;133;2;141;;C:\xampp\htdocs\e-learning\app\Model\User.php;f1;133;2;141;;;;vpos;;v;;r;;d29,133;;b0,0;;mdata;;p">
+					<treenode node="characters;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f2;134;13;134;;C:\xampp\htdocs\e-learning\app\Model\User.php;f2;134;13;134;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="data;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f23;133;28;133;;C:\xampp\htdocs\e-learning\app\Model\User.php;f23;133;28;133;;C:\xampp\htdocs\e-learning\app\Model\User.php;f23;133;28;133;;C:\xampp\htdocs\e-learning\app\Model\User.php;f23;133;28;133;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;135;16;135;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;135;16;135;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;135;16;135;;C:\xampp\htdocs\e-learning\app\Model\User.php;f11;135;16;135;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f8;203;13;203;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="validateUser;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;86;2;92;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;86;2;92;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;86;2;92;;C:\xampp\htdocs\e-learning\app\Model\User.php;f8;86;2;92;;;;vpos;;v;;r;;d31,86;;b1,0;;m">
+					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;87;10;87;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;87;10;87;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;87;10;87;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;87;10;87;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
 				</treenode>
-				<treenode node="validate;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f8;210;17;210;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;13;14;13;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;13;14;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="_STATUS_LOCKED;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f19;13;34;13;;;;vpos;;v;;r;;d-1,-1;;b1,5;;m">
+				</treenode>
+				<treenode node="_STATUS_NORMAL;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f19;14;34;14;;;;vpos;;v;;r;;d-1,-1;;b1,5;;m">
+				</treenode>
+				<treenode node="_STATUS_NOT_ACTIVE;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f19;15;38;15;;;;vpos;;v;;r;;d-1,-1;;b1,5;;m">
+				</treenode>
+				<treenode node="_TYPE_MANAGER;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f19;16;33;16;;;;vpos;;v;;r;;d-1,-1;;b1,5;;m">
+				</treenode>
+				<treenode node="_TYPE_STUDENT;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f19;18;33;18;;;;vpos;;v;;r;;d-1,-1;;b1,5;;m">
+				</treenode>
+				<treenode node="_TYPE_TEACHER;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Model\User.php;f19;17;33;17;;;;vpos;;v;;r;;d-1,-1;;b1,5;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f8;203;13;203;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Model\User.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="validate;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f8;210;17;210;;C:\xampp\htdocs\e-learning\app\Model\User.php;f9;21;18;21;;C:\xampp\htdocs\e-learning\app\Model\User.php;f9;21;18;21;;C:\xampp\htdocs\e-learning\app\Model\User.php;f9;21;18;21;;C:\xampp\htdocs\e-learning\app\Model\User.php;f9;21;18;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="User2;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f0;4188;1;4253;;;;vpos;;vCakeTestModel;;c;;r;;d34,4188;;b0,0;;m">
@@ -24248,30 +24318,50 @@
 				<treenode node="useTable;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\View\Helper\FormHelperTest.php;f8;238;17;238;;;;vpos;;v;;r;;d-1,-1;;b1,0;;m">
 				</treenode>
 			</treenode>
-			<treenode node="UsersController;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Console\Command\BakeShellTest.php;f1;29;2;30;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f0;9;1;86;;;;vpos;;vAppController;;c;;r;;d44,9;;b0,0;;m">
-				<treenode node="beforeFilter;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;16;2;18;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;16;2;18;;;;vpos;;v;;r;;d24,16;;b0,0;;m">
+			<treenode node="UsersController;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Console\Command\BakeShellTest.php;f1;29;2;30;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f0;9;2;209;;;;vpos;;vAppController;;c;;r;;d44,9;;b0,0;;m">
+				<treenode node="beforeFilter;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;16;2;18;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;16;2;18;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;16;2;18;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;16;2;18;;;;vpos;;v;;r;;d24,16;;b0,0;;m">
 				</treenode>
-				<treenode node="login;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;20;2;79;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;20;2;79;;;;vpos;;v;;r;;d18,20;;b0,0;;m">
-					<treenode node="password;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f4;40;13;40;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f4;40;13;40;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="get_client_ip;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;189;2;209;;;;vpos;;v;;r;;d26,189;;b0,0;;m">
+				</treenode>
+				<treenode node="login;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;20;2;178;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;20;2;178;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;20;2;178;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;20;2;178;;;;vpos;;v;;r;;d18,20;;b0,0;;m">
+					<treenode node="_STATUS_LOCKED;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f41;91;56;91;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="sql;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;23;7;23;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;23;7;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="_STATUS_NOT_ACTIVE;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f37;52;56;52;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;21;10;21;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;21;10;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="_TYPE_MANAGER;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f17;62;31;62;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="u;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;36;5;36;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;36;5;36;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="_TYPE_STUDENT;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f17;108;31;108;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
-					<treenode node="WrongNum;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f6;63;15;63;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f6;63;15;63;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					<treenode node="_TYPE_TEACHER;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f17;78;31;78;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="ip;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;59;8;59;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="max_time_wrong_pass;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;120;25;120;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="password;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f4;42;13;42;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f4;42;13;42;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f4;42;13;42;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f4;42;13;42;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="sql;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;23;7;23;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;23;7;23;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;23;7;23;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;23;7;23;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="system_param;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f6;124;19;124;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f6;124;19;124;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;21;10;21;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;21;10;21;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;21;10;21;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;21;10;21;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="u;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;37;5;37;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;37;5;37;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;37;5;37;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f3;37;5;37;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+					</treenode>
+					<treenode node="WrongNum;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;118;14;118;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;118;14;118;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;118;14;118;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;118;14;118;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="logout;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;81;2;84;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;81;2;84;;;;vpos;;v;;r;;d19,81;;b0,0;;m">
-					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f2;82;7;82;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f2;82;7;82;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="logout;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;180;2;183;;;;vpos;;v;;r;;d19,180;;b0,0;;m">
+					<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f2;181;7;181;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
 				</treenode>
-				<treenode node="helpers;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;14;13;14;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;14;13;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="notConfirm;PHP:Function Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f1;185;2;187;;;;vpos;;v;;r;;d22,185;;b0,0;;m">
 				</treenode>
-				<treenode node="layout;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;13;12;13;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;13;12;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="helpers;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;14;13;14;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;14;13;14;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;14;13;14;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;14;13;14;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
-				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				<treenode node="layout;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;13;12;13;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;13;12;13;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;13;12;13;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;13;12;13;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+				</treenode>
+				<treenode node="name;PHP:Var Name;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;11;10;11;;C:\xampp\htdocs\e-learning\app\Controller\UsersController.php;f5;11;10;11;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</treenode>
 			<treenode node="Uuid;PHP:Class Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\Case\Model\models.php;f0;2063;1;2071;;;;vpos;;vCakeTestModel;;c;;r;;d33,2063;;b0,0;;m">
@@ -27866,7 +27956,7 @@
 			</treenode>
 			<treenode node="theme;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\View\View.php;f8;163;14;163;;C:\xampp\htdocs\e-learning\lib\Cake\View\Helper.php;f8;54;14;54;;;;vpos;;v;;r;;d-1,-1;;b1,0;;m">
 			</treenode>
-			<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\View\Scaffolds\view.ctp;f9;30;14;30;;C:\xampp\htdocs\e-learning\lib\Cake\View\Scaffolds\index.ctp;f16;23;21;23;;C:\xampp\htdocs\e-learning\lib\Cake\View\Scaffolds\form.ctp;f6;20;11;20;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\scaffold_error.ctp;f11;35;16;35;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\private_action.ctp;f11;28;16;28;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\pdo_error.ctp;f11;37;16;37;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_view.ctp;f99;21;104;21;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_table.ctp;f11;28;16;28;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_plugin.ctp;f11;44;16;44;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_layout.ctp;f11;32;16;32;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_helper.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_datasource_config.ctp;f11;28;16;28;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_datasource.ctp;f11;33;16;33;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_database.ctp;f11;32;16;32;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_controller.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_connection.ctp;f5;41;10;41;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_component.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_behavior.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_action.ctp;f11;42;16;42;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Themed\TestTheme\Posts\themed.ctp;f11;2;16;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Themed\TestTheme\Layouts\default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\json\index.ctp;f16;2;21;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\sequencial_nocache.ctp;f7;3;12;3;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\parent_view.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\parent_2.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\parent_1.ctp;f0;1;5;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\open_block.ctp;f0;1;5;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\nocache_multiple_element.ctp;f11;8;16;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\nested_extends.ctp;f0;1;5;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\helper_overwrite.ctp;f5;2;10;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_with_element.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_self.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_missing_element.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_loop_inner.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_loop.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_element.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\cache_form.ctp;f12;2;17;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\xml\default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\rss\default.ctp;f5;1;10;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\json\default.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\text\japanese.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\text\default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\html\thin.ctp;f12;8;17;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\html\japanese.ctp;f12;8;17;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\html\default.ctp;f12;8;17;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\multi_cache.ctp;f7;3;12;3;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\flash.ctp;f11;4;16;4;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\default.ctp;f0;2;5;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\cache_layout.ctp;f11;5;16;5;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\cache_empty_sections.ctp;f12;9;17;9;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\banana.ctp;f6;2;11;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\ajax2.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\ajax.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Errors\error500.ctp;f6;7;11;7;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Errors\error400.ctp;f6;10;11;10;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\text\custom_helper.ctp;f22;0;27;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\html\nested_element.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\html\image.ctp;f5;2;10;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\nocache\sub1.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\nocache\plain.ctp;f7;2;12;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\nocache\contains_nocache.ctp;f7;3;12;3;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\parent_element.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\html_call.ctp;f5;1;10;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\extended_missing_element.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\extended_element.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\Plugin\TestPlugin\View\Layouts\Emails\text\plug_default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Pages\home.ctp;f55;145;60;145;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\xml\default.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\rss\default.ctp;f5;8;10;8;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\Emails\text\default.ctp;f11;18;16;18;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\Emails\html\default.ctp;f12;15;17;15;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\flash.ctp;f11;12;16;12;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\error.ctp;f12;14;17;14;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\default.ctp;f12;14;17;14;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\ajax.ctp;f11;9;16;9;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Errors\error500.ctp;f6;16;11;16;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Errors\error400.ctp;f6;19;11;19;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\views\view.ctp;f33;54;38;54;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\views\index.ctp;f33;81;38;81;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\views\form.ctp;f34;55;39;55;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\actions\controller_actions.ctp;f22;68;27;68;;C:\xampp\htdocs\e-learning\app\View\Pages\home.ctp;f55;145;60;145;;C:\xampp\htdocs\e-learning\app\View\Layouts\xml\default.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\app\View\Layouts\rss\default.ctp;f5;8;10;8;;C:\xampp\htdocs\e-learning\app\View\Layouts\flash.ctp;f11;21;16;21;;C:\xampp\htdocs\e-learning\app\View\Layouts\error.ctp;f12;23;17;23;;C:\xampp\htdocs\e-learning\app\View\Layouts\ajax.ctp;f11;18;16;18;;C:\xampp\htdocs\e-learning\app\View\Errors\error500.ctp;f6;25;11;25;;C:\xampp\htdocs\e-learning\app\View\Errors\error400.ctp;f6;28;11;28;;C:\xampp\htdocs\e-learning\app\View\Layouts\Emails\html\default.ctp;f12;24;17;24;;C:\xampp\htdocs\e-learning\app\View\Layouts\Emails\text\default.ctp;f11;18;16;18;;C:\xampp\htdocs\e-learning\app\View\Elements\Bar\Codelobster0.ctp;f14;7;19;7;;C:\xampp\htdocs\e-learning\app\View\Elements\Bar\panel.ctp;f2;33;7;33;;C:\xampp\htdocs\e-learning\app\View\Layouts\default.ctp;f12;23;17;23;;C:\xampp\htdocs\e-learning\app\View\Elements\Bar\top_panel.ctp;f2;33;7;33;;C:\xampp\htdocs\e-learning\app\View\Users\login.ctp;f8;54;13;54;;C:\xampp\htdocs\e-learning\app\View\Students\homepage.ctp;f5;12;10;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
+			<treenode node="this;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\View\Scaffolds\view.ctp;f9;30;14;30;;C:\xampp\htdocs\e-learning\lib\Cake\View\Scaffolds\index.ctp;f16;23;21;23;;C:\xampp\htdocs\e-learning\lib\Cake\View\Scaffolds\form.ctp;f6;20;11;20;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\scaffold_error.ctp;f11;35;16;35;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\private_action.ctp;f11;28;16;28;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\pdo_error.ctp;f11;37;16;37;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_view.ctp;f99;21;104;21;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_table.ctp;f11;28;16;28;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_plugin.ctp;f11;44;16;44;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_layout.ctp;f11;32;16;32;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_helper.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_datasource_config.ctp;f11;28;16;28;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_datasource.ctp;f11;33;16;33;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_database.ctp;f11;32;16;32;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_controller.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_connection.ctp;f5;41;10;41;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_component.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_behavior.ctp;f11;40;16;40;;C:\xampp\htdocs\e-learning\lib\Cake\View\Errors\missing_action.ctp;f11;42;16;42;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Themed\TestTheme\Posts\themed.ctp;f11;2;16;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Themed\TestTheme\Layouts\default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\json\index.ctp;f16;2;21;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\sequencial_nocache.ctp;f7;3;12;3;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\parent_view.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\parent_2.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\parent_1.ctp;f0;1;5;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\open_block.ctp;f0;1;5;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\nocache_multiple_element.ctp;f11;8;16;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\nested_extends.ctp;f0;1;5;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\helper_overwrite.ctp;f5;2;10;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_with_element.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_self.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_missing_element.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_loop_inner.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_loop.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\extend_element.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Posts\cache_form.ctp;f12;2;17;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\xml\default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\rss\default.ctp;f5;1;10;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\json\default.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\text\japanese.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\text\default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\html\thin.ctp;f12;8;17;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\html\japanese.ctp;f12;8;17;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\Emails\html\default.ctp;f12;8;17;8;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\multi_cache.ctp;f7;3;12;3;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\flash.ctp;f11;4;16;4;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\default.ctp;f0;2;5;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\cache_layout.ctp;f11;5;16;5;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\cache_empty_sections.ctp;f12;9;17;9;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\banana.ctp;f6;2;11;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\ajax2.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Layouts\ajax.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Errors\error500.ctp;f6;7;11;7;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Errors\error400.ctp;f6;10;11;10;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\text\custom_helper.ctp;f22;0;27;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\html\nested_element.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\html\image.ctp;f5;2;10;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\nocache\sub1.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\nocache\plain.ctp;f7;2;12;2;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\nocache\contains_nocache.ctp;f7;3;12;3;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\parent_element.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\html_call.ctp;f5;1;10;1;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\extended_missing_element.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Elements\extended_element.ctp;f6;0;11;0;;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\Plugin\TestPlugin\View\Layouts\Emails\text\plug_default.ctp;f11;1;16;1;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Pages\home.ctp;f55;145;60;145;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\xml\default.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\rss\default.ctp;f5;8;10;8;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\Emails\text\default.ctp;f11;18;16;18;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\Emails\html\default.ctp;f12;15;17;15;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\flash.ctp;f11;12;16;12;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\error.ctp;f12;14;17;14;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\default.ctp;f12;14;17;14;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Layouts\ajax.ctp;f11;9;16;9;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Errors\error500.ctp;f6;16;11;16;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\skel\View\Errors\error400.ctp;f6;19;11;19;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\views\view.ctp;f33;54;38;54;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\views\index.ctp;f33;81;38;81;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\views\form.ctp;f34;55;39;55;;C:\xampp\htdocs\e-learning\lib\Cake\Console\Templates\default\actions\controller_actions.ctp;f22;68;27;68;;C:\xampp\htdocs\e-learning\app\View\Pages\home.ctp;f55;145;60;145;;C:\xampp\htdocs\e-learning\app\View\Layouts\xml\default.ctp;f11;0;16;0;;C:\xampp\htdocs\e-learning\app\View\Layouts\rss\default.ctp;f5;8;10;8;;C:\xampp\htdocs\e-learning\app\View\Layouts\flash.ctp;f11;21;16;21;;C:\xampp\htdocs\e-learning\app\View\Layouts\error.ctp;f12;23;17;23;;C:\xampp\htdocs\e-learning\app\View\Layouts\ajax.ctp;f11;18;16;18;;C:\xampp\htdocs\e-learning\app\View\Errors\error500.ctp;f6;25;11;25;;C:\xampp\htdocs\e-learning\app\View\Errors\error400.ctp;f6;28;11;28;;C:\xampp\htdocs\e-learning\app\View\Layouts\Emails\html\default.ctp;f12;24;17;24;;C:\xampp\htdocs\e-learning\app\View\Layouts\Emails\text\default.ctp;f11;18;16;18;;C:\xampp\htdocs\e-learning\app\View\Elements\Bar\Codelobster0.ctp;f14;7;19;7;;C:\xampp\htdocs\e-learning\app\View\Elements\Bar\panel.ctp;f2;33;7;33;;C:\xampp\htdocs\e-learning\app\View\Layouts\default.ctp;f12;23;17;23;;C:\xampp\htdocs\e-learning\app\View\Elements\Bar\top_panel.ctp;f2;33;7;33;;C:\xampp\htdocs\e-learning\app\View\Users\login.ctp;f8;54;13;54;;C:\xampp\htdocs\e-learning\app\View\Students\homepage.ctp;f6;12;11;12;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
 			<treenode node="time;PHP:Var Name;C:\xampp\htdocs\e-learning\lib\Cake\Test\test_app\View\Emails\text\custom_helper.ctp;f42;0;47;0;;;;vpos;;v;;r;;d-1,-1;;b0,0;;m">
 			</treenode>
@@ -33410,10 +33500,19 @@
 		<file name="C:\xampp\htdocs\e-learning\app\webroot\test.php" crc="340827410"/>
 		<file name="C:\xampp\htdocs\e-learning\app\webroot\index.php" crc="-1484392261"/>
 		<file name="C:\xampp\htdocs\e-learning\app\webroot\.htaccess" crc="664552048"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Users\not_confirm.ctp" crc="1604745361"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Users\logout.ctp" crc="-1819356844"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Users\login.ctp" crc="-859695473"/>
-		<file name="C:\xampp\htdocs\e-learning\app\View\Students\homepage.ctp" crc="507380078"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Teachers\verifycode_confirm.ctp" crc="1604745361"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Teachers\list_teacher.ctp" crc="-1819356844"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Teachers\homepage.ctp" crc="-1819356844"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\SystemParams\change_value.ctp" crc="-1819356844"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Students\verifycode_confirm.ctp" crc="1604745361"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Students\homepage.ctp" crc="-55547158"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Pages\home.ctp" crc="856989759"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Managers\homepage.ctp" crc="-1819356844"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Managers\cancel_access.ctp" crc="1604745361"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\Managers\backup.ctp" crc="-1819356844"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Layouts\xml\default.ctp" crc="-1226178100"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Layouts\rss\default.ctp" crc="-662677806"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Layouts\js\default.ctp" crc="417298255"/>
@@ -33429,13 +33528,22 @@
 		<file name="C:\xampp\htdocs\e-learning\app\View\Emails\text\default.ctp" crc="-1834830599"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Emails\html\default.ctp" crc="-1006871751"/>
 		<file name="C:\xampp\htdocs\e-learning\app\View\Elements\Bar\top_panel.ctp" crc="-1106780861"/>
-		<file name="C:\xampp\htdocs\e-learning\app\Model\User.php" crc="-721762233"/>
+		<file name="C:\xampp\htdocs\e-learning\app\View\AllowedIPs\add.ctp" crc="-1819356844"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Model\User.php" crc="-960271372"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Model\Teacher.php" crc="-2141109079"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Model\SystemParam.php" crc="-1481537737"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Model\Student.php" crc="1271410965"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Model\Manager.php" crc="-1558399748"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Model\AppModel.php" crc="1537343685"/>
-		<file name="C:\xampp\htdocs\e-learning\app\Controller\UsersController.php" crc="275586943"/>
-		<file name="C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php" crc="-1861561422"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Model\AllowedIP.php" crc="160758288"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Controller\UsersController.php" crc="0"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Controller\TeachersController.php" crc="-371403425"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Controller\SystemParamsController.php" crc="925011136"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Controller\StudentsController.php" crc="-1662353660"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Controller\PagesController.php" crc="-535258904"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Controller\ManagersController.php" crc="-902073514"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Controller\AppController.php" crc="-1481704415"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Controller\AllowedIPsController.php" crc="-591020460"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Console\Command\AppShell.php" crc="-1388152312"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Console\cake.php" crc="-240306698"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Config\Schema\sessions.php" crc="-66090063"/>
@@ -33443,7 +33551,7 @@
 		<file name="C:\xampp\htdocs\e-learning\app\Config\Schema\db_acl.php" crc="1865436569"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Config\routes.php" crc="-1481163693"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Config\database.php" crc="1012200346"/>
-		<file name="C:\xampp\htdocs\e-learning\app\Config\core.php" crc="822718424"/>
+		<file name="C:\xampp\htdocs\e-learning\app\Config\core.php" crc="-2109709010"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Config\bootstrap.php" crc="-1913449182"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Config\acl.php" crc="-1234619169"/>
 		<file name="C:\xampp\htdocs\e-learning\app\Config\acl.ini.php" crc="189843962"/>

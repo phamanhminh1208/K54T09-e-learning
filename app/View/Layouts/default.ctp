@@ -50,8 +50,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>
 		<div id="content">
-			<?php				
-					if(!$this->Session->check('User') && $this->action != "login" && $this->action != "register"){					
+			<?php	
+					$allow = array(
+						'login',
+						'register',
+						'locked',
+						'verifycodeConfirm'
+					);
+					if(!$this->Session->check('User') && !in_array($this->action, $allow)){					
 			?>
 				<script type="text/javascript">
 					window.location = "<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'login')); ?>";            
@@ -62,7 +68,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php echo $this->Session->flash(); ?>
 			
 			<?php 
-				if($this->action != "login" && $this->action != "register"){
+				if(!in_array($this->action, $allow)){
 					echo $this->element("bar/top_panel"); 	
 				}				
 			?>

@@ -11,11 +11,19 @@ class User extends AppModel {
 
 	var $name = 'User';
 	
-	var	$validate = array(
+	public static 		$_STATUS_LOCKED			=	1;
+	public static 		$_STATUS_NORMAL			=	2;
+	public static 		$_STATUS_NOT_ACTIVE		=	1;
+	public static 		$_TYPE_MANAGER			=	1;
+	public static 		$_TYPE_TEACHER			=	2;
+	public static 		$_TYPE_STUDENT			=	3;
+	
+	
+	var					$validate = array(
 		"Username"			=>	array(
 			"rule1"				=>	array(
 				"rule"				=>	array("notEmpty"),
-				"message"			=>	"ユーザーの入力がありませんでした。 ",
+				"message"			=>	"ユーザー名の入力がありませんでした。",
 			),
 			"rule2"				=>	array(
 				"rule"				=>	"/^[a-z A-Z 0-9]{6,50}$/i",
@@ -26,18 +34,47 @@ class User extends AppModel {
 				"message"			=>	"このユーザー名は既に登録された。",
 			),
 		),
-		"Password"			=>	array(),
-		"RetypePass"		=>	array(),
+		"Password"			=>	array(
+			"rule1"				=>	array(
+				"rule"				=>	array("notEmpty"),
+				"messafe"			=>	"初期パスワードの入力がありませんでした。",
+			),
+			"rule2"				=>	array(
+				"rule"				=>	"/^[a-zA-Z0-9 !@#$%^*()_+}{:;'?]{6,50}$/",
+				"messafe"			=>	"初期パスワードは６から５０文字があらなければなりない。",
+			)		
+		),
+		"RetypePass"		=>	array(
+			"rule1"				=>	array(
+				"rule"				=>	array("notEmpty"),
+				"messafe"			=>	"再入力パスワードの入力がありませんでした。",
+			),
+			"rule2"				=>	array(
+				"rule"				=>	"comparePassword",
+				"messafe"			=>	"初期パスワードと再入力パスワードは違った。",
+			)
+		),
 		"RealName"			=>	array(),
 		"Email"				=>	array(
 			"rule"				=>	"email",
 			"message"			=>	"Eメールのフォーマットが不正した。",
 		),
-		"Status"			=>	array(),
-		"Birthday"			=>	array(),
+		"Status"			=>	array(
+			"rule"				=>	array("between", 1, 3),
+			"message"			=>	"",
+		),
+		"Birthday"			=>	array(
+			"rule"				=>	"date",
+			"Message"			=>	"生年月日のフォーマットが不正した。",
+		),
 		"FilterChar"		=>	array(),
-		"Address"			=>	array(),
-		"PhoneNum"			=>	array(),		
+		"Address"			=>	array(
+			"rule"				=>	array("notEmpty"),
+			"message"			=>	"",
+		),
+		"PhoneNum"			=>	array(
+			
+		),		
 	);
 	
 	
@@ -95,10 +132,10 @@ class User extends AppModel {
 	}
 	
 	function hashPassword($data){
-		//$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		if(isset($this->data[$this->name]['Username']) && isset($this->data[$this->name]['Password'])){
-			//$this->data[$this->name]['FilterChar'] = $characters[rand(0, strlen($characters) - 1)];
-			$this->data[$this->name]['FilterChar'] = 'a';
+			$this->data[$this->name]['FilterChar'] = $characters[rand(0, strlen($characters) - 1)];
+			//$this->data[$this->name]['FilterChar'] = 'a';
 			$this->data[$this->name]['Password'] = Security::hash($this->data[$this->name]['Password']. "+" .$this->data[$this->name]['Password']. "+" .$this->data[$this->name]['FilterChar'], NULL, TRUE);
 			return $data;
 		}

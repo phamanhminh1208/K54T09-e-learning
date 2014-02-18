@@ -10,5 +10,5 @@
 ?>
 <h1>Homepage</h1>
 <?php
-echo $this->Html->link("ログアウト", array('controller'=>'users', 'action'=>'logout'));
+	echo $this->Html->link("ログアウト", array('controller'=>'users', 'action'=>'logout'));
 ?>
