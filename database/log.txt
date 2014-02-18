@@ -1,0 +1,5 @@
+*****update 2014-19-02*****
+create 3 users
+ +1 student: username: student1; password: abc123@
+ +1 teacher: username: teacher;  password: abc123@
+ +1 manager: username: anhminh1208; password: abc123@
