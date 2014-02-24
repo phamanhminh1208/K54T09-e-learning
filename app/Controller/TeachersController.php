@@ -10,6 +10,7 @@
 class TeachersController extends AppController {
 
 	var $name= 'Teachers';
+	
 	function homepage() {
 		
 	}

@@ -66,14 +66,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			}			
 			?>
 			<?php echo $this->Session->flash(); ?>
-			
 			<?php 
 				if(!in_array($this->action, $allow)){
 					echo $this->element("bar/top_panel"); 	
 				}				
 			?>
 			
-			<?php echo $this->fetch('content'); ?>
+			<?php echo $this->fetch('content'); ?>			
 		</div>
 		<div id="footer">
 			<?php echo $this->Html->link(
