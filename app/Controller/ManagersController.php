@@ -15,7 +15,6 @@ class ManagersController extends AppController {
 	var $helpers		=	array("Session", "Cache");
 	
 	var $cacheAction = array(
-         'homepage'  => array('callbacks' => true, 'duration' => "+1 day"),
     ); 
 	
 	function homepage() {

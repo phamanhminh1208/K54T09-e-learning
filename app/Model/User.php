@@ -11,12 +11,13 @@ class User extends AppModel {
 
 	var $name = 'User';
 	
-	public static 		$_STATUS_LOCKED			=	1;
-	public static 		$_STATUS_NORMAL			=	2;
-	public static 		$_STATUS_NOT_ACTIVE		=	1;
-	public static 		$_TYPE_MANAGER			=	1;
-	public static 		$_TYPE_TEACHER			=	2;
-	public static 		$_TYPE_STUDENT			=	3;
+	const  		_STATUS_TEMP_LOCKED	=	1;
+	const 		_STATUS_NORMAL			=	2;
+	const 		_STATUS_NOT_ACTIVE		=	3;
+	const 		_STATUS_LOGIN_LOCKED	=	4;
+	const 		_TYPE_MANAGER			=	1;
+	const 		_TYPE_TEACHER			=	2;
+	const 		_TYPE_STUDENT			=	3;
 	
 	
 	var					$validate = array(

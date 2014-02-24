@@ -50,17 +50,17 @@ class UsersController extends AppController {
 					/* end of deleting WrongNum */
 					
 					/* redirect if not active */
-					if($u["User"]["Status"] == User::$_STATUS_NOT_ACTIVE){//if user is not active
+					if($u["User"]["Status"] == User::_STATUS_NOT_ACTIVE){//if user is not active
 						return $this->redirect(array('controller'=>'users', 'action'=>'notConfirm'));
 					}
 					/* end of redirecting if not active */
 					
 					$this->Session->write('User',$u["User"]);	//store user data in Session
 					
-					$ip = $this->get_client_ip();					
+					$ip = $this->getClientIp();					
 					/* redirect	user */
 					switch($u["User"]["UserType"]){
-						case User::$_TYPE_MANAGER:	//if user is manager
+						case User::_TYPE_MANAGER:	//if user is manager
 							/* check ip */
 							//Controller:loadModel('AllowedIp');
 							/*-- check client ip in list ip 
@@ -72,14 +72,14 @@ class UsersController extends AppController {
 							));*/
 							/*-- end of checking client ip in list ip */
 							/*if($this->AllowedIp->getNumRows()>0){	//if client ip in list
-								return $this->redirect(array('controller'=>'managers', 'action'=>'homepage'));
+								*/return $this->redirect(array('controller'=>'managers', 'action'=>'homepage'));/*
 							}
 							comment because not have real ip*/
 							
-							return $this->redirect(array('controller'=>'managers', 'action'=>'cancelAccess'));
+							//return $this->redirect(array('controller'=>'managers', 'action'=>'cancelAccess'));
 							break;
 							
-						case User::$_TYPE_TEACHER:	//if user if teacher
+						case User::_TYPE_TEACHER:	//if user if teacher
 							/* check last ip */
 							/*-- check lastip == current client ip */
 							/*Controller:loadModel('Teacher');
@@ -92,27 +92,27 @@ class UsersController extends AppController {
 							));*/
 							/*-- end of checking lastip */
 							/*if($this->Teacher->getNumRows()>0){	//if lastip == current ip
-								if($u["User"]["Status"] == User::$_STATUS_LOCKED){	//if user is locked
+								if($u["User"]["Status"] == User::_STATUS_LOGIN_LOCKED){	//if user is locked
 									return $this->redirect(array(
 										'controller'		=>	'teachers', 
 										'action'			=>	'verifycodeConfirm',
-										'reason'				=>	'locked'
+										'reason'			=>	'locked'
 									));
 								}else{	//user is normal
-									return $this->redirect(array('controller'=>'teachers', 'action'=>'homepage'));
+									*/return $this->redirect(array('controller'=>'teachers', 'action'=>'homepage'));/*
 								}
 							}
 							comment becase not have real ip*/
 							//if lastip != current ip
-							return $this->redirect(array(
+							/*return $this->redirect(array(
 								'controller'		=>	'teachers', 
 								'action'			=>	'verifycodeConfirm',
-								'reason'				=>	'lastip'
-							));							
+								'reason'			=>	'lastip'
+							));							*/
 							break;
 							
-						case User::$_TYPE_STUDENT:	 //if user is student				
-							if($u["User"]["Status"] == User::$_STATUS_LOCKED){//if student is locked
+						case User::_TYPE_STUDENT:	 //if user is student				
+							if($u["User"]["Status"] == User::_STATUS_LOGIN_LOCKED){//if student is locked
 								return $this->redirect(array('controller'=>'students', 'action'=>'locked'));
 							}else{
 								return $this->redirect(array('controller'=>'students', 'action'=>'homepage'));	
@@ -156,14 +156,14 @@ class UsersController extends AppController {
 											
 					$WrongNum = $this->Session->read('Login.WrongNum')+1;
 					
-					if($u["User"]["UserType"]==User::$_TYPE_TEACHER || $u["User"]["UserType"]==User::$_TYPE_STUDENT){//if user is teacher or student						
+					if($u["User"]["UserType"]==User::_TYPE_TEACHER || $u["User"]["UserType"]==User::_TYPE_STUDENT){//if user is teacher or student						
 						if($WrongNum>=$max_time_wrong_pass){						
 							//Lock user if being student or teacher	
 							/* change status of user in database */
 							$this->User->id = $u["User"]["id"];
 							$this->User->save(array(
 								"User"			=>	array(
-									"Status"		=>	1,
+									"Status"		=>	User::_STATUS_TEMP_LOCKED,
 								)
 							));
 							/* end of changing status of user in database */							
@@ -201,7 +201,35 @@ class UsersController extends AppController {
 		
 	}
 	
-	function get_client_ip() {
+	function lockUser($user_id){
+		$this->autoRender = false;
+		
+		$this->User->id = $user_id;
+		$this->User->save(array(
+			"User"			=>	array(
+				"Status"		=>	User::_STATUS_LOGIN_LOCKED,
+			)
+		));
+	}
+	
+	function unlockUser($user_id){
+		$this->autoRender = false;
+		
+		$this->User->id = $user_id;
+		$this->User->save(array(
+			"User"			=>	array(
+				"Status"		=>	User::_STATUS_NORML,
+			)
+		));
+	}
+	
+	function deleteUser($user_id){
+		$this->autoRender = false;
+		
+		
+	}
+	
+	function getClientIp() {
 	    /*$ipaddress = '';
 	    if ($_SERVER['HTTP_CLIENT_IP'])
 	        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
