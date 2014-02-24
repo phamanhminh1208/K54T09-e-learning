@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2014 at 06:52 PM
+-- Generation Time: Feb 24, 2014 at 05:46 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -103,6 +103,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `lesson_id` int(11) NOT NULL,
   `Link` text COLLATE utf8_unicode_ci NOT NULL,
   `Description` text COLLATE utf8_unicode_ci,
+  `Status` int(11) DEFAULT NULL COMMENT '0: normal  1:lock',
   `Type` int(11) NOT NULL,
   `UploadTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -120,9 +121,16 @@ CREATE TABLE IF NOT EXISTS `lessons` (
   `Description` text COLLATE utf32_unicode_ci,
   `user_id` int(11) NOT NULL,
   `MakeTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `TimeToLearn` int(11) NOT NULL,
+  `Status` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `lessons`
+--
+
+INSERT INTO `lessons` (`id`, `LessonName`, `Description`, `user_id`, `MakeTime`, `Status`) VALUES
+(1, 'IT日本語', 'IT日本語', 2, '2014-02-24 04:42:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -152,7 +160,15 @@ CREATE TABLE IF NOT EXISTS `lesson_tags` (
   `lesson_id` int(11) NOT NULL,
   `Tag` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `lesson_tags`
+--
+
+INSERT INTO `lesson_tags` (`id`, `lesson_id`, `Tag`) VALUES
+(1, 1, '日本語'),
+(2, 1, 'IT');
 
 -- --------------------------------------------------------
 
@@ -185,9 +201,9 @@ CREATE TABLE IF NOT EXISTS `reports` (
   `ReportPersonID` int(11) NOT NULL,
   `ReportedPersonID` int(11) NOT NULL,
   `ReportTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `ReportType` int(11) NOT NULL,
+  `ReportType` int(11) NOT NULL COMMENT '1:lesson  2:file  3:test  4:comment   5:others',
   `Reason` text COLLATE utf8_unicode_ci,
-  `Status` int(11) NOT NULL,
+  `Status` int(11) NOT NULL COMMENT '0:reject 1:accept',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -288,6 +304,7 @@ CREATE TABLE IF NOT EXISTS `tests` (
   `TestName` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
   `lesson_id` int(11) NOT NULL,
   `Description` text COLLATE utf32_unicode_ci,
+  `Status` int(11) NOT NULL COMMENT '0:normal  1:lock',
   `LinkTsv` text COLLATE utf32_unicode_ci NOT NULL,
   `LinkHtml` text COLLATE utf32_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
@@ -307,12 +324,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `UserType` int(11) NOT NULL DEFAULT '3' COMMENT '1: manager  2:teacher  3:student',
   `RealName` varchar(50) COLLATE utf32_unicode_ci DEFAULT NULL,
   `Email` varchar(255) COLLATE utf32_unicode_ci DEFAULT NULL,
-  `Status` int(11) NOT NULL COMMENT '1:locked 2:normal 3:not_active',
   `Birthday` date DEFAULT NULL,
   `FilterChar` varchar(1) COLLATE utf32_unicode_ci NOT NULL,
   `Address` text COLLATE utf32_unicode_ci NOT NULL,
   `PhoneNum` varchar(15) COLLATE utf32_unicode_ci DEFAULT NULL,
   `CreateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Status` int(11) NOT NULL COMMENT '1:locked 2:normal 3:not_active 4:login_locked',
+  `WarnNum` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci AUTO_INCREMENT=4 ;
 
@@ -320,10 +338,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `Username`, `Password`, `FirstPass`, `UserType`, `RealName`, `Email`, `Status`, `Birthday`, `FilterChar`, `Address`, `PhoneNum`, `CreateTime`) VALUES
-(1, 'anhminh1208', '574fdd18538a9858b1857a4c5f1d432bc4d15627', '574fdd18538a9858b1857a4c5f1d432bc4d15627', 1, 'Minh Phạm', NULL, 2, NULL, 'a', 'Bắc Ninh', NULL, '2014-02-13 16:31:33'),
-(2, 'teacher1', '8269da729699f7d98e37ae5c192e263038a8837b', '8269da729699f7d98e37ae5c192e263038a8837b', 2, 'Teacher 1', NULL, 1, '1988-02-14', 'a', 'AAAA', NULL, '2014-02-14 16:14:04'),
-(3, 'student1', '0926a1d5a0ed1b4f67e3e608c85671c4eab4d40f', '0926a1d5a0ed1b4f67e3e608c85671c4eab4d40f', 3, 'Student 1', NULL, 2, '1990-04-14', 'a', 'BBBB', NULL, '2014-02-14 16:16:58');
+INSERT INTO `users` (`id`, `Username`, `Password`, `FirstPass`, `UserType`, `RealName`, `Email`, `Birthday`, `FilterChar`, `Address`, `PhoneNum`, `CreateTime`, `Status`, `WarnNum`) VALUES
+(1, 'anhminh1208', '574fdd18538a9858b1857a4c5f1d432bc4d15627', '574fdd18538a9858b1857a4c5f1d432bc4d15627', 1, 'Minh Phạm', NULL, NULL, 'a', 'Bắc Ninh', NULL, '2014-02-13 16:31:33', 2, 0),
+(2, 'teacher1', '8269da729699f7d98e37ae5c192e263038a8837b', '8269da729699f7d98e37ae5c192e263038a8837b', 2, 'Teacher 1', NULL, '1988-02-14', 'a', 'AAAA', NULL, '2014-02-14 16:14:04', 2, 0),
+(3, 'student1', '0926a1d5a0ed1b4f67e3e608c85671c4eab4d40f', '0926a1d5a0ed1b4f67e3e608c85671c4eab4d40f', 3, 'Student 1', NULL, '1990-04-14', 'a', 'BBBB', NULL, '2014-02-14 16:16:58', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -348,6 +366,7 @@ CREATE TABLE IF NOT EXISTS `warnings` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `WarnContent` text COLLATE utf8_unicode_ci NOT NULL,
   `WarnedPersonID` int(11) NOT NULL,
+  `WarnType` int(11) NOT NULL,
   `WarnTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;

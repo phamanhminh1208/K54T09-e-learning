@@ -1,4 +1,10 @@
-*****update 2014-19-02*****
+*****update 2014-02-24*****
+add status field to lessons, tests, files
+add warnNum field to users
+create 1 lesson:
+create 2 tag:
+
+*****update 2014-02-19*****
 create 3 users
  +1 student: username: student1; password: abc123@
  +1 teacher: username: teacher;  password: abc123@
