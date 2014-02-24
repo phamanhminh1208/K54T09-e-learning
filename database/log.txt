@@ -1,8 +1,15 @@
 *****update 2014-02-24*****
-add status field to lessons, tests, files
-add warnNum field to users
+add field: WarnedLessonID to warnings
+change field: ReportLessonID -> ReportedLessonID in reports
+change field: Warnings.WarnedLessonID, Reports.ReportedLessonID -> allow null
+
+
+*****update 2014-02-24*****
+add field: status to lessons, tests, files
+add field: warnNum to users
 create 1 lesson:
 create 2 tag:
+
 
 *****update 2014-02-19*****
 create 3 users
