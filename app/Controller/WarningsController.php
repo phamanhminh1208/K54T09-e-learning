@@ -9,7 +9,7 @@
 
 class WarningsController extends AppController {
 
-	$name= 'Warnings';
+	var $name= 'Warnings';
 	function add() {
 		
 	}

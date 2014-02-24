@@ -9,6 +9,9 @@
 
 class File extends AppModel {
 
-	$name = 'File';
+	var $name = 'File';
+	
+	const		_STATUS_NORMAL				=	0;
+	const		_STATUS_LOCKED				=	1;
 }
 ?>

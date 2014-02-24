@@ -9,7 +9,7 @@
 
 class BackupsController extends AppController {
 
-	$name= 'Backups';
+	var $name= 'Backups';
 	function add() {
 		
 	}

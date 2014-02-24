@@ -9,6 +9,9 @@
 
 class Lesson extends AppModel {
 
-	$name = 'Lesson';
+	var $name = 'Lesson';
+	
+	const		_STATUS_NORMAL				=	0;
+	const		_STATUS_LOCKED				=	1;
 }
 ?>

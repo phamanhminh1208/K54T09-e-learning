@@ -9,6 +9,6 @@
 
 class BanStudent extends AppModel {
 
-	$name = 'BanStudent';
+	var $name = 'BanStudent';
 }
 ?>

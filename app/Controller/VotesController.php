@@ -9,7 +9,7 @@
 
 class VotesController extends AppController {
 
-	$name= 'Votes';
+	var $name= 'Votes';
 	function add() {
 		
 	}

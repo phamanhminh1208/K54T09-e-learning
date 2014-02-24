@@ -9,6 +9,6 @@
 
 class Warning extends AppModel {
 
-	$name = 'Warning';
+	var $name = 'Warning';
 }
 ?>

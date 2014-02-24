@@ -9,6 +9,6 @@
 
 class Report extends AppModel {
 
-	$name = 'Report';
+	var $name = 'Report';
 }
 ?>

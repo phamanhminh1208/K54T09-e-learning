@@ -9,6 +9,6 @@
 
 class AnswersController extends AppController {
 
-	$name= 'Answers';
+	var $name= 'Answers';
 }
 ?>

@@ -11,7 +11,7 @@ class User extends AppModel {
 
 	var $name = 'User';
 	
-	const  		_STATUS_TEMP_LOCKED	=	1;
+	const  		_STATUS_TEMP_LOCKED		=	1;
 	const 		_STATUS_NORMAL			=	2;
 	const 		_STATUS_NOT_ACTIVE		=	3;
 	const 		_STATUS_LOGIN_LOCKED	=	4;

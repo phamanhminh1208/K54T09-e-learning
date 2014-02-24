@@ -9,6 +9,6 @@
 
 class Backup extends AppModel {
 
-	$name = 'Backup';
+	var $name = 'Backup';
 }
 ?>

@@ -9,6 +9,6 @@
 
 class LessonTag extends AppModel {
 
-	$name = 'LessonTag';
+	var $name = 'LessonTag';
 }
 ?>

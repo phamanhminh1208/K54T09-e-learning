@@ -9,6 +9,6 @@
 
 class Vote extends AppModel {
 
-	$name = 'Vote';
+	var $name = 'Vote';
 }
 ?>

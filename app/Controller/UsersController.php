@@ -33,7 +33,7 @@ class UsersController extends AppController {
 				),
 				'conditions'	=>	array(
 					'Username'		=>	$this->request->data['User']['Username'],						
-				),	
+				),					
 			);
 			$u = $this->User->find("first",$sql);
 			/* end of getting data of user */

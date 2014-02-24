@@ -9,6 +9,6 @@
 
 class Comment extends AppModel {
 
-	$name = 'Comment';
+	var $name = 'Comment';
 }
 ?>

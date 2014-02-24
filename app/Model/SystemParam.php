@@ -9,6 +9,7 @@
 
 class SystemParam extends AppModel {
 
-	var $name = 'SystemParam';
+	var $name = 'SystemParam';	
+	
 }
 ?>

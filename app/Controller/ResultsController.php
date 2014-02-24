@@ -9,7 +9,8 @@
 
 class ResultsController extends AppController {
 
-	$name= 'Results';
+	var $name= 'Results';
+	
 	function add() {
 		
 	}
