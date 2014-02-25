@@ -1,0 +1,17 @@
+#verifycode {
+	width: 600px;
+	margin: 20px auto 20px;
+	border: 1px solid #000;
+	border-radius: 7px;
+	box-shadow: 4px 4px 3px 0 #888;
+	padding: 10px 0;
+	background: #fff;
+}
+
+#verifycode .box_cont {
+	padding: 30px 30px;
+}	
+
+th{
+	text-align: center;
+}

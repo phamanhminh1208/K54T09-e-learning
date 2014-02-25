@@ -20,7 +20,7 @@ class User extends AppModel {
 	const 		_TYPE_STUDENT			=	3;
 	
 	
-	var					$validate = array(
+	var			$validate 				= array(
 		"Username"			=>	array(
 			"rule1"				=>	array(
 				"rule"				=>	array("notEmpty"),
@@ -38,21 +38,21 @@ class User extends AppModel {
 		"Password"			=>	array(
 			"rule1"				=>	array(
 				"rule"				=>	array("notEmpty"),
-				"messafe"			=>	"初期パスワードの入力がありませんでした。",
+				"message"			=>	"初期パスワードの入力がありませんでした。",
 			),
 			"rule2"				=>	array(
 				"rule"				=>	"/^[a-zA-Z0-9 !@#$%^*()_+}{:;'?]{6,50}$/",
-				"messafe"			=>	"初期パスワードは６から５０文字があらなければなりない。",
+				"message"			=>	"初期パスワードは６から５０文字があらなければなりない。",
 			)		
 		),
 		"RetypePass"		=>	array(
 			"rule1"				=>	array(
 				"rule"				=>	array("notEmpty"),
-				"messafe"			=>	"再入力パスワードの入力がありませんでした。",
+				"message"			=>	"再入力パスワードの入力がありませんでした。",
 			),
 			"rule2"				=>	array(
 				"rule"				=>	"comparePassword",
-				"messafe"			=>	"初期パスワードと再入力パスワードは違った。",
+				"message"			=>	"初期パスワードと再入力パスワードは違った。",
 			)
 		),
 		"RealName"			=>	array(),
@@ -65,17 +65,23 @@ class User extends AppModel {
 			"message"			=>	"",
 		),
 		"Birthday"			=>	array(
-			"rule"				=>	"date",
-			"Message"			=>	"生年月日のフォーマットが不正した。",
+			"rule1"				=>	array(
+				"rule"				=>	array("notEmpty"),
+				"message"			=>	"生年月日の入力がありませんでした。"
+			),
+			"rule2"				=>	array(
+				"rule"				=>	array("date","ymd"),
+				"message"			=>	"生年月日のフォーマットが不正した。",
+			)
 		),
-		"FilterChar"		=>	array(),
-		"Address"			=>	array(
+		//"FilterChar"		=>	array(),
+		/*"Address"			=>	array(
 			"rule"				=>	array("notEmpty"),
 			"message"			=>	"",
-		),
-		"PhoneNum"			=>	array(
+		),*/
+		/*"PhoneNum"			=>	array(
 			
-		),		
+		),*/		
 	);
 	
 	
@@ -116,6 +122,15 @@ class User extends AppModel {
 					"limit"			=>	1,
 			);
 		}
+		
+		$this->find("first",$condition);
+		$count = $this->getNumRows();
+		if($count > 0){
+			return FALSE;
+		}
+		else{
+			return TRUE;
+		}
 	}
 	
 	/**
@@ -125,21 +140,31 @@ class User extends AppModel {
 	* 	FALSE:	else
 	*/	
 	public function comparePassword(){
-		if($this->data[$this->name]['Password'] != $this->data[$this->name]['RetypePass']){
+		if($this->data[$this->name]['Password'] !== $this->data[$this->name]['RetypePass']){
 			return FALSE;
 		}else{
 			return TRUE;
 		}
 	}
 	
-	function hashPassword($data){
+	static function createFilterChar(){
 		$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		if(isset($this->data[$this->name]['Username']) && isset($this->data[$this->name]['Password'])){
-			$this->data[$this->name]['FilterChar'] = $characters[rand(0, strlen($characters) - 1)];
-			//$this->data[$this->name]['FilterChar'] = 'a';
-			$this->data[$this->name]['Password'] = Security::hash($this->data[$this->name]['Password']. "+" .$this->data[$this->name]['Password']. "+" .$this->data[$this->name]['FilterChar'], NULL, TRUE);
+		return $characters[rand(0, strlen($characters) - 1)];
+	}
+	
+	function hashPassword($data){		
+		if(isset($this->data[$this->name]['Username']) && isset($this->data[$this->name]['Password']) && isset($this->data[$this->name]['FilterChar'])){			
+			
+			$this->data[$this->name]['Password'] = sha1($this->data[$this->name]['Username']. "+" .$this->data[$this->name]['Password']. "+" .$this->data[$this->name]['FilterChar']);
+			
+			$this->data[$this->name]['FirstPass'] = $this->data[$this->name]['Password'];
+			
 			return $data;
 		}
+	}
+	
+	function beforeSave($option=array()){
+		$this->hashPassword(NULL, TRUE);
 	}
 }
 ?>

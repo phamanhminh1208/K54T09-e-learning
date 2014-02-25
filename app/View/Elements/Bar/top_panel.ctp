@@ -1,4 +1,6 @@
 <?php
+if($this->Session->check('User.id')){		
+	
 	$left_panel = array(
 		1		=>	array(
 		),
@@ -111,3 +113,6 @@
         </li>
     </ul>
 </div>
+<?php
+}
+?>

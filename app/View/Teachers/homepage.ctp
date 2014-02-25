@@ -21,24 +21,13 @@
 	<table width="100%" border="1" class="table table-bordered table-hover table-striped">
 		<thead>
 			<tr class="frame">
-				<th width="10%">
-					順番
-					<span style="display:block;">
-						<?php echo $this->Html->link(
-										$this->Html->image('btn_down.png', array('alt'=>'up', 'width'=>'16', 'height'=>'16')),
-										'#',
-										array('target' => '_blank', 'escape' => false)
-								);
-							echo $this->Html->link(
-										$this->Html->image('btn_up.png', array('alt'=>'up', 'width'=>'16', 'height'=>'16')),
-										'#',
-										array('target' => '_blank', 'escape' => false)
-								);?>								
-					</span>
+				<th class="col-sm-1" style="text-align: center;">
+					順番 
+					<div>&nbsp;</div>
 				</th>
 				
-				<th class="col-sm-6">
-					授業
+				<th class="col-sm-6" style="text-align: center;">
+					授業<br/>
 					<?php echo $this->Html->link(
 										$this->Html->image('btn_down.png', array('alt'=>'up', 'width'=>'16', 'height'=>'16')),
 										'#',
@@ -51,7 +40,8 @@
 								);?>
 				</th>
 				
-				<th class="col-sm-2">
+				<th class="col-sm-2" style="text-align: center;">
+					作った時間<br/>
 					<?php echo $this->Html->link(
 										$this->Html->image('btn_down.png', array('alt'=>'up', 'width'=>'16', 'height'=>'16')),
 										'#',
@@ -64,8 +54,8 @@
 								);?>
 				</th>
 				
-				<th class="col-sm-2">
-					受けた学生
+				<th class="col-sm-2" style="text-align: center;">
+					受けた学生<br/>
 					<?php echo $this->Html->link(
 										$this->Html->image('btn_down.png', array('alt'=>'up', 'width'=>'16', 'height'=>'16')),
 										'#',
@@ -78,35 +68,35 @@
 								);?>
 				</th>
 				
-				<th width="5%">
+				<th class="col-sm-1">
 					<span style="display:block;"></span>
 				</th>
 			</tr>
 		</thead>
 		
 		<tbody>
-			<tr style="background:#FFF">
+			<tr>
 				<td>1</td>
 				<td><a href="#">授業１</a></td>
 				<td>2013/11/05 08:30:00</td>
 				<td align="right">1110</td>
 				<td><input class="btn btn-primary" value="変更" type="button"></td>
 			</tr>
-			<tr 　style="background:#FFFde5">
+			<tr>
 				<td>2</td>
 				<td><a href="#">授業2</a></td>
 				<td>2013/11/20 12:20:00</td>
 				<td align="right">200</td>
 				<td><input class="btn btn-primary" value="変更" type="button"></td>
 			</tr>
-			<tr style="background:#FFF">
+			<tr>
 				<td>3</td>
 				<td><a href="#">授業3</a></td>
 				<td>2013/11/06 08:30:00</td>
 				<td align="right">117</td>
 				<td><input class="btn btn-primary" value="変更" type="button"></td>
 			</tr>
-			<tr 　style="background:#FFFde5">
+			<tr>
 				<td>4</td>
 				<td><a href="#">授業4</a></td>
 				<td>2013/11/21 12:20:00</td>

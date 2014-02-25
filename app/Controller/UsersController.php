@@ -7,18 +7,29 @@
 * @license 
 **/
 
+App::import('Controller', 'Teachers');
+
 class UsersController extends AppController {
 
 	var $name = 'Users';
 	
 	var $layout			=	"default";
-	var $helpers		=	array("Session");	
+	var $helpers		=	array("Session", "Cache");
+	//var $components 	=	array('RequestHandler');
 		
 	function beforeFilter(){
 		parent::beforeFilter();		
 	}
 	
 	function login() {
+		/* delete session if exist */
+		if($this->Session->check('User')){
+			$this->Session->delete('User');	
+		}
+		/* end of deleting session if exist */
+		
+		$this->set("title_for_layout", "ログイン");
+		
 		if($this->request->is('post')){			
 			/* get data of user */				
 			$sql = array(
@@ -55,60 +66,62 @@ class UsersController extends AppController {
 					}
 					/* end of redirecting if not active */
 					
-					$this->Session->write('User',$u["User"]);	//store user data in Session
+					/* get client ip */
+					$ip = $this->request->clientIp();
 					
-					$ip = $this->getClientIp();					
+					$this->Session->write('User',$u["User"]);	//store user data in Session					
+					
 					/* redirect	user */
 					switch($u["User"]["UserType"]){
 						case User::_TYPE_MANAGER:	//if user is manager
 							/* check ip */
-							//Controller:loadModel('AllowedIp');
-							/*-- check client ip in list ip 
+							$this->loadModel('AllowedIp');
+							/*-- check client ip in list ip */
 							$this->AllowedIp->find("first", array(
 								'fields'		=>	array('id'),
 								'conditions'	=>	array(
 									'IP'			=>	$ip,
 								)
-							));*/
+							));
 							/*-- end of checking client ip in list ip */
-							/*if($this->AllowedIp->getNumRows()>0){	//if client ip in list
-								*/return $this->redirect(array('controller'=>'managers', 'action'=>'homepage'));/*
+														
+							if($this->AllowedIp->getNumRows()>0){	//if client ip in list
+								return $this->redirect(array('controller'=>'managers', 'action'=>'homepage'));
 							}
-							comment because not have real ip*/
 							
-							//return $this->redirect(array('controller'=>'managers', 'action'=>'cancelAccess'));
+							return $this->redirect(array('controller'=>'managers', 'action'=>'cancelAccess'));
 							break;
 							
 						case User::_TYPE_TEACHER:	//if user if teacher
-							/* check last ip */
+							/* check last ip */							
+							$this->loadModel('Teacher');
 							/*-- check lastip == current client ip */
-							/*Controller:loadModel('Teacher');
 							$this->Teacher->find("first", array(
 								'fields'		=>	array('id'),
 								'conditions'	=>	array(
 									'user_id'			=>	$u["User"]["id"],
 									'LastIP'			=>	$ip,
 								)
-							));*/
+							));
 							/*-- end of checking lastip */
-							/*if($this->Teacher->getNumRows()>0){	//if lastip == current ip
-								if($u["User"]["Status"] == User::_STATUS_LOGIN_LOCKED){	//if user is locked
+							if($this->Teacher->getNumRows()>0){	//if lastip == current ip
+								if($u["User"]["Status"] == User::_STATUS_TEMP_LOCKED){	//if user is locked
 									return $this->redirect(array(
 										'controller'		=>	'teachers', 
 										'action'			=>	'verifycodeConfirm',
-										'reason'			=>	'locked'
+										TeachersController::_REASON_LOCKED
 									));
 								}else{	//user is normal
-									*/return $this->redirect(array('controller'=>'teachers', 'action'=>'homepage'));/*
+									return $this->redirect(array('controller'=>'teachers', 'action'=>'homepage'));
 								}
 							}
-							comment becase not have real ip*/
+							
 							//if lastip != current ip
-							/*return $this->redirect(array(
+							return $this->redirect(array(
 								'controller'		=>	'teachers', 
 								'action'			=>	'verifycodeConfirm',
-								'reason'			=>	'lastip'
-							));							*/
+								TeachersController::_REASON_LASTIP
+							));
 							break;
 							
 						case User::_TYPE_STUDENT:	 //if user is student				
@@ -126,7 +139,7 @@ class UsersController extends AppController {
 					
 					/* get MAX_TIME_WRONG_PASSWORD from database and store into Session*/						
 					if(!$this->Session->check('SystemParam.MAX_TIME_WRONG_PASSWORD')){
-						Controller::loadModel('SystemParam');
+						$this->loadModel('SystemParam');
 						$system_param = $this->SystemParam->find("first", array(
 							'fields'		=>	array('Value'),
 							'conditions'	=>	array(
@@ -212,41 +225,49 @@ class UsersController extends AppController {
 		));
 	}
 	
+	/**
+	* unlock a user by id
+	* @param undefined $user_id
+	* 
+	*/
 	function unlockUser($user_id){
 		$this->autoRender = false;
 		
 		$this->User->id = $user_id;
 		$this->User->save(array(
 			"User"			=>	array(
-				"Status"		=>	User::_STATUS_NORML,
+				"Status"		=>	User::_STATUS_NORMAL,
 			)
 		));
 	}
 	
 	function deleteUser($user_id){
 		$this->autoRender = false;
-		
-		
 	}
 	
-	function getClientIp() {
-	    /*$ipaddress = '';
-	    if ($_SERVER['HTTP_CLIENT_IP'])
-	        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-	    else if($_SERVER['HTTP_X_FORWARDED_FOR'])
-	        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-	    else if($_SERVER['HTTP_X_FORWARDED'])
-	        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-	    else if($_SERVER['HTTP_FORWARDED_FOR'])
-	        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-	    else if($_SERVER['HTTP_FORWARDED'])
-	        $ipaddress = $_SERVER['HTTP_FORWARDED'];
-	    else if($_SERVER['REMOTE_ADDR'])
-	        $ipaddress = $_SERVER['REMOTE_ADDR'];
-	    else
-	        $ipaddress = 'UNKNOWN';
-	 
-	    return $ipaddress;	*/
+	function addUser($data, $return_error=false){		
+		if(!empty($data)){
+			if(!isset($data['User']['FilterChar'])){
+				$data['User']['FilterChar'] = User::createFilterChar();
+			}
+						
+			$this->User->set($data);			
+			if($this->User->validateUser()){
+				
+				$this->User->save($data);
+				return $this->User->getInsertID();
+			}else{
+				if($return_error){
+					return $this->User->validationErrors;	
+				}				
+				return FALSE;	
+			}			
+		}else{
+			if($return_error){
+				return array();
+			}
+			return FALSE;
+		}
 	}
 }
 ?>

@@ -40,7 +40,7 @@ h2 {
 .delete {
     background-image:url(thungrac.PNG);
 	width: 25px !important;
-	height:23px !important;
+	height: 23px !important;
 }
 span {
 	font-weight:bold;
@@ -54,8 +54,8 @@ a {
 	padding: 2px 5px !important;
 	border-radius: 5px !important;
 	box-shadow: 2px 2px 2px #a9a9a9 inset !important;
-	width: 98% !important;
-	height: 25px !important;
+	width: 100% !important;
+	height: 31px !important;
 }
 .w_100 {
 	width: 100px !important;
@@ -63,6 +63,10 @@ a {
 .w_200 {
 	width: 200px !important;
 }
+.w_300 {
+	width: 300px !important;
+}
+
 .required {
 	color: #F00;
 	font-size: 18px;
@@ -70,4 +74,62 @@ a {
 
 #top_menu_nav{
 	font-size: 1.3em;
+}
+
+/* Form errors */
+form .error {
+	background: #FFDACC;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	font-weight: normal;
+}
+form .error-message {
+	-moz-border-radius: none;
+	-webkit-border-radius: none;
+	border-radius: none;
+	border: none;
+	background: none;
+	margin: 0;
+	padding-left: 4px;
+	padding-right: 0;
+}
+form .error,
+form .error-message {
+	color: #9E2424;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.tit {
+	font-size: 30px;
+	line-height: normal;
+	text-align: center;
+	font-weight: bold;
+}
+
+#page-content th {		
+	padding: 10px 10px;
+	border: 1px solid #000;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1.4;
+	vertical-align: middle;
+	background: #547cba url('../img/bg_th.png') repeat-x 0 0;
+	text-align: center;
+	font-size: 18px !important;
+}
+#page-content td {
+	padding: 10px 10px !important;
+	border: 1px solid #000;
+	vertical-align: middle;
+}
+#page-content tbody {
+	background: none;
+	border: 1;
+	text-align: left;
 }

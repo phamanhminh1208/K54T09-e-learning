@@ -54,6 +54,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 					$allow = array(
 						'login',
 						'register',
+						'registerSuccess',
 						'locked',
 						'verifycodeConfirm'
 					);
@@ -72,7 +73,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				}				
 			?>
 			
-			<?php echo $this->fetch('content'); ?>			
+			<?php				
+				if(file_exists("css/".$this->name.'/'.$this->action.".css")){
+					echo $this->Html->css($this->name.'/'.$this->action);
+				}
+				
+				if(file_exists("js/".$this->name.'/'.$this->action.".js")){
+					echo $this->Html->script($this->name.'/'.$this->action);
+				}
+				
+				echo $this->fetch('content'); 
+			?>			
 		</div>
 		<div id="footer">
 			<?php echo $this->Html->link(

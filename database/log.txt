@@ -1,3 +1,7 @@
+*****update 2014-02-25*****
+add field: ReportPersonUsername to reports
+create 2 reports
+
 *****update 2014-02-24*****
 add field: WarnedLessonID to warnings
 change field: ReportLessonID -> ReportedLessonID in reports
