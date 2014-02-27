@@ -3,13 +3,13 @@
         <h2>あなたの登録が成功した。</h2>
 		<br/><br/>
         <button type="button" class="btn btn-lg btn-success">
-			それで、システムの機能を使うために、ログインしてください
+			それで、システムの機能を使うために、ログインしてください。
             <a id="countdown_time">2</a>
 		</button>
         <script>
             $('.btn-success').click(function(){
-                $(location).attr('href', 'index.php?view=home');
-            })
+                $(location).attr('href', "<?php echo Router::url(array('controller'=>'users', 'action'=>'login')) ?>");
+            });
             var sec = 2;
             var timer = setInterval(function() {
                 if (sec == -1) {

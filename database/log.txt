@@ -1,3 +1,10 @@
+*****update 2014-02-27*****
+add field: LockTime, LastActionTime to users
+set field: Address, Birthday, PhoneNum in users to NOT NULL
+create 9 users
+ +5 teachers: password: abc123@
+ +4 students: password: abc123@
+
 *****update 2014-02-25*****
 add field: ReportPersonUsername to reports
 create 2 reports

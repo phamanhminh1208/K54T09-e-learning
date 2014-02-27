@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2014 at 07:40 PM
+-- Generation Time: Feb 25, 2014 at 09:53 AM
 -- Server version: 5.5.32
 -- PHP Version: 5.4.19
 
@@ -199,13 +199,22 @@ CREATE TABLE IF NOT EXISTS `reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ReportedLessonID` int(11) DEFAULT NULL,
   `ReportPersonID` int(11) NOT NULL,
+  `ReportPersonUsername` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `ReportedPersonID` int(11) NOT NULL,
   `ReportTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ReportType` int(11) NOT NULL COMMENT '1:lesson  2:file  3:test  4:comment   5:others',
   `Reason` text COLLATE utf8_unicode_ci,
   `Status` int(11) NOT NULL COMMENT '0:reject 1:accept',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='select users.Username\r\nfrom reports, users\r\nwhere users.id in (`ReportedPersonID`,`ReportPersonID`)' AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `reports`
+--
+
+INSERT INTO `reports` (`id`, `ReportedLessonID`, `ReportPersonID`, `ReportPersonUsername`, `ReportedPersonID`, `ReportTime`, `ReportType`, `Reason`, `Status`) VALUES
+(1, 1, 2, 'teacher1', 1, '2014-02-25 08:42:43', 2, 'absafkajfh', 1),
+(2, 1, 3, 'student1', 2, '2014-02-25 08:45:12', 1, 'asfjasfk', 2);
 
 -- --------------------------------------------------------
 
@@ -279,7 +288,7 @@ CREATE TABLE IF NOT EXISTS `teachers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `BankAccount` varchar(50) COLLATE utf32_unicode_ci NOT NULL,
-  `SecretQuestion` text COLLATE utf32_unicode_ci NOT NULL,
+  `SecretQuestion` varchar(255) COLLATE utf32_unicode_ci NOT NULL,
   `FirstAnswer` varchar(40) COLLATE utf32_unicode_ci NOT NULL,
   `Answer` varchar(40) COLLATE utf32_unicode_ci NOT NULL,
   `LastIP` varchar(50) COLLATE utf32_unicode_ci NOT NULL,

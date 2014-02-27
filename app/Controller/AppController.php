@@ -40,4 +40,14 @@ class AppController extends Controller {
 	function beforeFilter(){		
 		$this->set("siteName", "E-Learning システム");
 	}
+	
+	function updateLastActionTime($user_id){
+		$this->loadModel('User');
+		$this->User->id = $user_id;
+		$this->User->save(array(
+			"User"			=>	array(				
+				"LastActionTime"		=>	DboSource::expression('NOW()')//date ('Y-m-d H:i:s'),
+			)
+		));
+	}
 }

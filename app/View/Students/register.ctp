@@ -5,16 +5,15 @@
 ?>
 
 <div id="page-content">
-	<h2 id="page-title" align='center'>先生登録</h2>
+	<h2 id="page-title" align='center'>学生登録</h2>
 	
 	<?php
-		echo $this->Form->create('Teacher', array(
+		echo $this->Form->create('Student', array(
 			'type'				=>	'post',
 			'inputDefaults'		=>	array(
 				'label'				=>	false,
 				'div'				=>	false,
-			),
-			//'novalidate'		=>	true,
+			)
 		));
 	?>
 	<table width="100%" id="register-form">
@@ -83,9 +82,9 @@
 					?>
 					<span class="input-group-addon" style='padding: 0px; background-color: inherit; border-width: 0px;'>
 						<?php echo $this->Html->image('ico_calendar.png'); ?>
-	                </span>
-				</div>
-				<strong class="required">※必須</strong>		
+	                </span>					
+				</div>	
+				<strong class="required"">※必須</strong>				
 			</td>
 		</tr>
 		<tr>
@@ -122,39 +121,17 @@
 			</td>
 		</tr>
 		<tr>
-			<th style="text-align:right;">銀行口座情報</th>
+			<th style="text-align:right;">クレジットカード情報</th>
 			<td>
-				<?php echo $this->Form->input('BankAccount', array(
+				<?php echo $this->Form->input('CreditCardNum', array(
 									'class'			=>	'input_txt w_300',
-									'placeholder'	=>	'0000-000-0-0000000',
+									'placeholder'	=>	'00000000-0000-0000-0000-0000',
 						)); 
 				?>
 				<strong class="required">※必須</strong>
 			</td>
 		  
-		</tr>
-		<tr>			
-			<th style="text-align:right;">秘密の質問</th>
-		  	<td>
-				<?php echo $this->Form->input('SecretQuestion', array(
-									'class'			=>	'input_txt w_300',
-									'placeholder'	=>	'秘密の質問',									
-						)); 
-				?>
-				<strong class="required">※必須</strong>
-			</td>
-		</tr>
-		<tr>
-		  	<th style="text-align:right;">秘密の答え</th>
-		  	<td>
-				<?php echo $this->Form->input('NAnswer', array(
-									'class'			=>	'input_txt w_300',
-									'placeholder'	=>	'秘密の答え',									
-						)); 
-				?>
-				<strong class="required">※必須</strong>
-			</td>
-		</tr>
+		</tr>		
 	</table>
 	
 	<br>
@@ -190,7 +167,7 @@
 	$('#TeacherRealName').focus();	
 	$(function() {        
         $('.input-group').datetimepicker({
-			pickTime: false
+			pickTime: false			
         });
     });
 </script>
