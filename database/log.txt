@@ -1,3 +1,8 @@
+*****update 2014-03-01*****
+update fields: change length of RealName, Address in users
+create 3 users:
+ +3 managers: password: abc123@
+
 *****update 2014-02-27*****
 add field: LockTime, LastActionTime to users
 set field: Address, Birthday, PhoneNum in users to NOT NULL
