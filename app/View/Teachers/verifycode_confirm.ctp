@@ -5,6 +5,7 @@ if(isset($data)){
 <div id="page-content">
 	<div id="verifycode">
 		<h2 class="tit">Verifycode確認</h2>
+		<h4 align="center" style="color: #d83927; margin-top: 20px;"><?php echo $reason; ?></h4>
 		<div class="box_cont">
 			<?php
 				echo $this->Form->create('Teacher', array(

@@ -50,4 +50,10 @@ class AppController extends Controller {
 			)
 		));
 	}
+	
+	function checkPermission($user_type){
+		if($this->Session->check('User') && $this->Session->read('User.UserType')!=$user_type){
+			return $this->render('/Errors/permission_denied');
+		}		
+	}
 }

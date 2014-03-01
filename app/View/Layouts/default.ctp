@@ -53,10 +53,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<?php	
 					$allow = array(
 						'login',
-						'register',
-						'registerSuccess',
-						'locked',
-						'verifycodeConfirm'
+						'register',							
+						'verifycodeConfirm',
+						'error404'
 					);
 					if(!$this->Session->check('User') && !in_array($this->action, $allow)){					
 			?>

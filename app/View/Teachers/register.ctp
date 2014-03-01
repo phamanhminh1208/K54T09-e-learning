@@ -85,7 +85,7 @@
 						<?php echo $this->Html->image('ico_calendar.png'); ?>
 	                </span>
 				</div>
-				<strong class="required">※必須</strong>		
+					
 			</td>
 		</tr>
 		<tr>
@@ -107,7 +107,7 @@
 									'placeholder'	=>	'住所',									
 						)); 
 				?>
-				<strong class="required">※必須</strong>
+				
 			</td>
 		</tr>
 		<tr>
@@ -118,7 +118,7 @@
 									'placeholder'	=>	'電話番号',
 						)); 
 				?>
-				<strong class="required">※必須</strong>
+				
 			</td>
 		</tr>
 		<tr>
@@ -171,7 +171,12 @@
 			/* end 送信する button */
 			
 			/* start 再入力する button */
-			echo "<a class='btn btn-primary' style='margin-right:5px;' onclick='clearInput();'>再入力する</a>";
+			echo $this->Form->button('再入力する', array(
+				'class'	=>	'btn btn-primary',
+				'type'	=>	'reset',
+				'div'	=>	false,
+				'style'	=>	'margin-right: 5px;'
+			));
 			/* end 再入力する button */
 			
 			/* start キャンセル button */
@@ -184,13 +189,13 @@
 	<div>
 		<?php echo $this->Session->flash(); ?>	
 	</div>
+	
+	<script type="text/javascript">
+		$('#TeacherRealName').focus();	
+		$(function() {        
+	        $('.input-group').datetimepicker({
+				pickTime: false
+	        });
+	    });
+	</script>
 </div>
-
-<script type="text/javascript">
-	$('#TeacherRealName').focus();	
-	$(function() {        
-        $('.input-group').datetimepicker({
-			pickTime: false
-        });
-    });
-</script>

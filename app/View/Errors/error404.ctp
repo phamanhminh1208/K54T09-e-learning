@@ -17,17 +17,17 @@
  */
 ?>
 <div style="height:30px;"></div>
-<div id="error-message-handler" class="alert alert-danger">	
+<div id="error-message-handler" class="alert alert-danger">
 	<h2>エラー404</h2>
 	<div>あなたの要求されたアドレス<?php echo ((isset($url))?(" ’".$url."’"):""); ?> <br/>はシステムで見つかりませんでした。</div	>
 
 <?php
 	$url = Router::url(array('controller'=>'users', 'action'=>'login'));
 	$btn_txt = "ログインする";
-	
+
 	if($this->Session->check('User')){
 		App::import('Model','User');
-		
+
 		$controller = "";
 		switch($this->Session->read('User.UserType')){
 			case User::_TYPE_MANAGER:
@@ -44,7 +44,7 @@
 		$btn_txt = "ホームページを行く";
 	}
 ?>
-	
+
 	<button type="button" class="btn btn-lg btn-primary">
 		<?php echo $btn_txt; ?>
 	</button>

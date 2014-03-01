@@ -9,7 +9,7 @@
 
 class LessonTagsController extends AppController {
 
-	$name= 'LessonTags';
+	var $name= 'LessonTags';
 	function add() {
 		
 	}

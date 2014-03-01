@@ -9,7 +9,8 @@
 
 class CommentsController extends AppController {
 
-	$name= 'Comments';
+	var $name= 'Comments';
+        
 	function add() {
 		
 	}

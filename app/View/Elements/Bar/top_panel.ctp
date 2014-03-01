@@ -1,22 +1,67 @@
 <?php
+App::import('Model','User');
 if($this->Session->check('User.id')){		
 	
 	$left_panel = array(
-		1		=>	array(
+		User::_TYPE_MANAGER		=>	array(
+			"ホーム"			=>	array(
+					'controller'	=>	'managers',
+					'action'		=>	'homepage',
+			),
+			"授業リスト"		=>	array(
+					'controller'	=>	'lessons',
+					'action'		=>	'list',
+			),
+			"ユーザー・リスト"	=>	array(
+					'controller'	=>	'users',
+					'action'		=>	'list',
+			),
+			"レポート・リスト"	=>	array(
+					'controller'	=>	'reports',
+					'action'		=>	'list'
+			),
+			"課金情報"		=>	array(
+					'controller'	=>	'managers',
+					'action'		=>	'',
+			),
+			"その他"			=>	array(
+					"定数変更"		=>	array(
+							'controller'	=>	'managers',
+							'action'		=>	'',
+					),
+					"バックアップ"		=>	array(
+							'controller'	=>	'managers',
+							'action'		=>	'backup',
+					),
+			)
 		),
-		2		=>	array(
+		User::_TYPE_TEACHER		=>	array(
+			"ホーム"			=>	array(
+					'controller'	=>	'teachers',
+					'action'		=>	'homepage',
+			),
+			"授業"			=>	array(
+					'追加'			=>	array(
+						'controller'	=>	'lessons',
+						'action'		=>	'add',
+					),
+					'リスト'			=>	array(
+						'controller'	=>	'lessons',
+						'action'		=>	'list',
+					),
+			),			
 		),
-		3		=>	array(
+		User::_TYPE_STUDENT		=>	array(
 			"ホーム"			=>	array(
 					'controller'	=>	'students',
 					'action'		=>	'homepage'
 			),
 			"授業"			=>	array(
-					"リスト"		=>	array(
+					"リスト"			=>	array(
 							'controller'	=>	'users',
 							'action'		=>	'logout'
 					),
-					"受けたリスト"	=>	array(
+					"受けたリスト"		=>	array(
 							'controller'	=>	'users',
 							'action'		=>	'logout'
 					),
@@ -105,10 +150,7 @@ if($this->Session->check('User.id')){
 					}
 				}
 				echo "</ul>";
-			}
-            /*foreach($right_panel as $menu => $link){
-                echo "<a href='".$link."'>".$menu." <b class=;caret'></b></a>";
-            }*/
+			}            
         ?>                    
         </li>
     </ul>

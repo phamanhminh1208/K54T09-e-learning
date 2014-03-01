@@ -9,7 +9,7 @@
 
 class BanStudentsController extends AppController {
 
-	$name= 'BanStudents';
+	var $name= 'BanStudents';
 	function add() {
 		
 	}

@@ -9,7 +9,7 @@
 
 class ReportsController extends AppController {
 
-	$name= 'Reports';
+	var $name= 'Reports';
 	function add() {
 		
 	}

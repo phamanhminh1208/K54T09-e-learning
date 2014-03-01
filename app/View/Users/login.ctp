@@ -28,17 +28,14 @@
 			<dt><label for="Password">パスワード</label></dt>
 			<dd>
 				<?php echo $this->Form->input('Password', array('type' => 'password')); ?>
-			</dd>
-			<dd class="other">
-				<input type="checkbox" align="right"> ログイン状態を保持する
-			</dd>
+			</dd>			
 			
-				<?php
-					if($this->Session->check('Message.flash')){
-						echo "<div class='alert alert-danger' id='error-message'>".
-								$this->Session->flash()."</div>";
-					}
-				?>
+			<?php
+				if($this->Session->check('Message.flash')){
+					echo "<div class='alert alert-danger' id='error-message'>".
+							$this->Session->flash()."</div>";
+				}
+			?>
 			
 			<dd class="other">
 				<?php echo $this->Form->end(array(

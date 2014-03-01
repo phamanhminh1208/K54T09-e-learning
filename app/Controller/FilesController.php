@@ -9,7 +9,7 @@
 
 class FilesController extends AppController {
 
-	$name= 'Files';
+	var $name= 'Files';
 	function add() {
 		
 	}

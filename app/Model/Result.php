@@ -9,6 +9,6 @@
 
 class Result extends AppModel {
 
-	$name = 'Result';
+	var $name = 'Result';
 }
 ?>

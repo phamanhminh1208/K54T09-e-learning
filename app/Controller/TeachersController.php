@@ -32,7 +32,7 @@ class TeachersController extends AppController {
 	* 
 	*/
 	function verifycodeConfirm($reason=null){
-				
+						
 		if($this->Session->check('User.id') && $reason!=null && ($reason==self::_REASON_LASTIP || $reason==self::_REASON_TEMP_LOCKED)){
 			$this->set("title_for_layout", "Verifycode確認");
 			
@@ -83,7 +83,15 @@ class TeachersController extends AppController {
 						'action'			=>	'homepage'
 					));
 				}else{ //if answer is incorrect
-					$this->Session->setFlash(__('秘密の答えは正しくない。'));					
+					if($reason == self::_REASON_TEMP_LOCKED){
+						$this->redirect(array(
+							'controller'		=>	'users',
+							'action'			=>	'login'
+						));
+					}else{
+						$this->Session->setFlash(__('秘密の答えは正しくない。'));	
+					}
+					
 				}
 				/* end of check answer */			
 				//$this->render();
@@ -96,9 +104,15 @@ class TeachersController extends AppController {
 				)
 			));
 			if($this->Teacher->getNumRows()>0){
-				$this->set('data',$question);	
-			}
-						
+				$message = "";
+				if($reason == self::_REASON_TEMP_LOCKED){
+					$message = "あなたはあなたのアカウントは一時的にロックされたから、<br>Verifycodeを確認してください。";
+				}else if($reason == self::_REASON_LASTIP){
+					$message = "あなたのIPアドレスと前回のIPアドレスが間違うから、<br>Verifycodeを確認してください。";
+				}
+				$this->set('reason', $message);
+				$this->set('data', $question);	
+			}						
 		}else{
 			$this->redirect(array(
 				'controller'		=>	'users',
@@ -113,9 +127,9 @@ class TeachersController extends AppController {
 	*/
 	
 	function register(){
-		$this->set("title_for_layout", "登録");			
+		$this->set("title_for_layout", "登録");
 		
-		if($this->request->is('post') && !empty($this->data)){		
+		if($this->request->is('post') && !empty($this->data)){
 			$data = array();
 			$data['User'] = $this->data['Teacher'];
 			$data['User']['FilterChar'] = User::createFilterChar();
@@ -138,9 +152,8 @@ class TeachersController extends AppController {
 				$this->Teacher->save($data, array('validate' => false));
 				/* end of saving Teacher */
 				$this->redirect(array("controller" => "users", "action" => "registerSuccess"));
-								
 			}else{				
-				/* show error message for each field*/				
+				/* show error message for each field*/								
 				foreach($error_messages as $key => $message){
 					$this->Teacher->invalidate( $key, $message[0] );
 				}
@@ -163,7 +176,7 @@ class TeachersController extends AppController {
 		    $Users->constructClasses();
 			/* end of loading UsersController */			
 		
-			$user_errors=$Users->isValidate($data);	//get user invalidation messages
+			$user_errors=$Users->isValidate($data);	//get user invalidation messages			
 			
 			/* get teacher invalidation messages */
 			$this->Teacher->set($data);
