@@ -59,7 +59,7 @@ class LogEngineCollection extends ObjectCollection {
  * @return mixed boolean false on any failures, string of classname to use if search was successful.
  * @throws CakeLogException
  */
-	protected static function _getLogger($loggerName) {
+	protected static function _getLogger($loggerName) {		
 		list($plugin, $loggerName) = pluginSplit($loggerName, true);
 		if (substr($loggerName, -3) !== 'Log') {
 			$loggerName .= 'Log';
@@ -67,7 +67,7 @@ class LogEngineCollection extends ObjectCollection {
 		App::uses($loggerName, $plugin . 'Log/Engine');
 		if (!class_exists($loggerName)) {
 			throw new CakeLogException(__d('cake_dev', 'Could not load class %s', $loggerName));
-		}
+		}		
 		return $loggerName;
 	}
 

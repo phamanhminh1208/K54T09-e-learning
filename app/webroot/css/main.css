@@ -1,153 +1,155 @@
 /* CSS Document */
 
 body{
-background-color: #000066;
+    background-color: #000066;
 }
 #container {
-	width: 960px;
-	background-color: #FFF;
-	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */	
+    width: 960px;
+    background-color: #FFF;
+    margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */	
 }
 #content {
-	background-color: #B6DDE8;
+    background-color: #B6DDE8;
 }
 #page-content {
-	padding: 2px 10px 10px 10px;
+    padding: 2px 10px 10px 10px;
 }
 #header {
-	height: 40px;
+    //height: 40px;
 }
 #footer {
-	height: 40px;
+    height: 40px;
 }
 #page-title {
-	/*border-left: solid 7px #4573d5;*/	
-	margin-bottom: 10px;
-	padding-left: 5px;
+    /*border-left: solid 7px #4573d5;*/	
+    margin-bottom: 10px;
+    padding-left: 5px;
 }
 h2 {
-	font-size: 24px;
-	line-height: 36px;
+    font-size: 24px;
+    line-height: 36px;
 }
 .textarea-large {
-	width: 250px;
-	height: 40px;
+    width: 250px;
+    height: 40px;
 }
 .textarea-xxlarge {
-	width: 450px;
-	height: 100px;
+    width: 450px;
+    height: 100px;
 }
 .delete {
     background-image:url(thungrac.PNG);
-	width: 25px !important;
-	height: 23px !important;
+    width: 25px !important;
+    height: 23px !important;
 }
 span {
-	font-weight:bold;
+    font-weight:bold;
 }
 a {
-	color: #0088cc;
-	text-decoration: none !important;
+    color: #0088cc;
+    text-decoration: none !important;
 }
 .input_txt, textarea {
-	border: 1px solid #696969 !important;
-	padding: 2px 5px !important;
-	border-radius: 5px !important;
-	box-shadow: 2px 2px 2px #a9a9a9 inset !important;
-	width: 100% !important;
-	height: 31px !important;
+    border: 1px solid #696969 !important;
+    padding: 2px 5px !important;
+    border-radius: 5px !important;
+    box-shadow: 2px 2px 2px #a9a9a9 inset !important;
+    width: 100% !important;
+    height: 31px !important;
 }
 .w_100 {
-	width: 100px !important;
+    width: 100px !important;
 }
 .w_200 {
-	width: 200px !important;
+    width: 200px !important;
 }
 .w_300 {
-	width: 300px !important;
+    width: 300px !important;
 }
 
 .required {
-	color: #F00;
-	font-size: 18px;
+    color: #F00;
+    font-size: 18px;
 }
 
 #top_menu_nav{
-	font-size: 1.3em;
+    clear: both;
+    font-size: 1.3em;
+    background-color: #B6DDE8;
 }
 
 /*System error*/
 #error-message-handler, #locked-form{
-	margin: 0 auto;
-	width: 750px;
-	padding: 50px;
-	text-align: center;
-	font-size: 1.3em;
+    margin: 0 auto;
+    width: 750px;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.3em;
 }
 
 #error-message-handler h2{	
-	color: #F00;
+    color: #F00;
 }
 
 #error-message-handler button{	
-	margin-top: 20px;
+    margin-top: 20px;
 }
 /* end of system erroe */
 
 /* Form errors */
 form .error {
-	background: #FFDACC;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	font-weight: normal;
+    background: #FFDACC;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-weight: normal;
 }
 form .error-message {
-	-moz-border-radius: none;
-	-webkit-border-radius: none;
-	border-radius: none;
-	border: none;
-	background: none;
-	margin: 0;
-	padding-left: 4px;
-	padding-right: 0;
+    -moz-border-radius: none;
+    -webkit-border-radius: none;
+    border-radius: none;
+    border: none;
+    background: none;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 0;
 }
 form .error,
 form .error-message {
-	color: #9E2424;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	-ms-box-shadow: none;
-	-o-box-shadow: none;
-	box-shadow: none;
-	text-shadow: none;
+    color: #9E2424;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 .tit {
-	font-size: 30px;
-	line-height: normal;
-	text-align: center;
-	font-weight: bold;
+    font-size: 30px;
+    line-height: normal;
+    text-align: center;
+    font-weight: bold;
 }
 
 #page-content th {		
-	padding: 10px 10px;
-	border: 1px solid #000;
-	color: #fff;
-	font-weight: bold;
-	line-height: 1.4;
-	vertical-align: middle;
-	background: #547cba url('../img/bg_th.png') repeat-x 0 0;
-	text-align: center;
-	font-size: 18px !important;
+    padding: 10px 10px;
+    border: 1px solid #000;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.4;
+    vertical-align: middle;
+    background: #547cba url('../img/bg_th.png') repeat-x 0 0;
+    text-align: center;
+    font-size: 18px !important;
 }
 #page-content td {
-	padding: 10px 10px !important;
-	border: 1px solid #000;
-	vertical-align: middle;	
+    padding: 10px 10px !important;
+    border: 1px solid #000;
+    vertical-align: middle;	
 }
 #page-content tbody {
-	background: none;
-	border: 1;
-	text-align: left;
+    background: none;
+    border: 1;
+    text-align: left;
 }

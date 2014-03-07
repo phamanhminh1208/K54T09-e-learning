@@ -100,8 +100,24 @@ CakeLog::config('debug', array(
 	'types' => array('notice', 'info', 'debug'),
 	'file' => 'debug',
 ));
+
 CakeLog::config('error', array(
 	'engine' => 'File',
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+//*******to use ELearning Exception
+require(APP . 'Lib' . DS . 'Exception' . DS . 'ELearningException.php');
+
+
+/*CakeLog::config('custom_path', array(
+    'engine' => 'FileLog',
+	'types'	=>	array('ERROR', 'INFO', 'WARNING'),
+    'path' => 'Logs/'
+));*/
+
+/*CakeLog::config('otherFile', array(
+    'engine' 	=> 	'ELearning',
+    'path'		=>	'Logs/',
+));*/

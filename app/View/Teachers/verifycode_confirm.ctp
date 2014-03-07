@@ -23,7 +23,7 @@ if(isset($data)){
 					<td class='col-sm-8'>						
 						<?php
 							echo $this->Form->input('SecretQuestion',array(								
-								'value'			=>	$data['Teacher']['SecretQuestion'],
+								'value'			=> base64_decode($data['Teacher']['SecretQuestion']),
 								'class'			=>	'input_txt',
 								'disabled'		=>	'disabled',			
 								'style'			=>	'width: 100%;'					

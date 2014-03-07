@@ -77,7 +77,7 @@
 	Configure::write('Exception', array(
 		'handler' => 'ErrorHandler::handleException',
 		//'renderer' => 'ExceptionRenderer',
-		'renderer' => 'AppExceptionRenderer',
+		'renderer' => 'ELearningExceptionRenderer',
 		'log' => true
 	));
 
@@ -217,7 +217,8 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
+		'defaults' => 'php',
+		'timeput' => 4320
 	));
 
 /**
@@ -384,3 +385,6 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+//disable warning and error report
+//error_reporting(0);

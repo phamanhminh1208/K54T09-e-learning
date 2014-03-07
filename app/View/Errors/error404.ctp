@@ -41,7 +41,7 @@
 				break;
 		}
 		$url = Router::url(array('controller'=>$controller, 'action'=>'homepage'));
-		$btn_txt = "ホームページを行く";
+		$btn_txt = "ホームページへ行く";
 	}
 ?>
 

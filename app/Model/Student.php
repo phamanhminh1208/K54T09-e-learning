@@ -11,17 +11,17 @@ class Student extends AppModel {
 
 	var $name = 'Student';
 	
-	var $validate 		=	array(
-		"CreditCardNum"		=>	array(
-			"rule1"				=>	array(
-				"rule"				=>	array("notEmpty"),
-				"message"			=>	"クレジットカード情報の入力がありませんでした。"
-			),
-			"rule2"				=>	array(
-				"rule"				=>	"/^[0-9]{8}-[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/i",
-				"message"			=>	"クレジットカード情報のフォーマットが不正した。"
-			)
-		)
+	var         $validate	=   array(
+            "CreditCardNum"	=>	array(
+                "rule1"             =>	array(
+                        "rule"		=>	array("notEmpty"),
+                        "message"	=>	"クレジットカード情報の入力がありませんでした。"
+                ),
+                "rule2"             =>	array(
+                        "rule"		=>	"/^[0-9]{8}-[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/i",
+                        "message"	=>	"クレジットカード情報のフォーマットが不正した。"
+                )
+            )
 	);
 	
 	/**

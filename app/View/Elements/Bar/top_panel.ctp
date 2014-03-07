@@ -98,7 +98,7 @@ if($this->Session->check('User.id')){
 </script>
 
 
-<div id="top_menu_nav" style="margin: 20px;">
+<div id="top_menu_nav">
     <ul class="nav nav-pills">
         <?php			
             foreach($left_panel[$this->Session->read('User.UserType')] as $menu => $link){

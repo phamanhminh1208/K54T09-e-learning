@@ -10,6 +10,7 @@
 class LessonStudentsController extends AppController {
 
 	var $name= 'LessonStudents';
+        
 	function add() {
 		
 	}

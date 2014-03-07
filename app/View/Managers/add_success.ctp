@@ -3,7 +3,7 @@
         <h2>あなたの管理者追加が成功した。</h2>
 		<br/><br/>
         <button type="button" class="btn btn-lg btn-success">
-			ホームページを行く。
+			ホームページへ行く。
             <a id="countdown_time">2</a>
 		</button>
         <script>

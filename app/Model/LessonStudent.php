@@ -8,7 +8,6 @@
 **/
 
 class LessonStudent extends AppModel {
-
-	var $name = 'LessonStudent';
+	var $name = 'LessonStudent';       
 }
 ?>
